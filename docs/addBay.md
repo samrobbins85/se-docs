@@ -1,12 +1,12 @@
 ---
-id: $IDENTIFIER
-title: $TITLE
+id: addBay
+title: addBay - WIP, currently not implemented
 ---
 
-Switches the position of two trays
+Adds a new bay to the warehouse
 ## URL
 ```http request
-POST /stockTake/$ENDPOINT
+POST /stockTake/addBay
 ```
 
 ## Input

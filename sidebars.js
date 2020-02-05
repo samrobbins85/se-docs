@@ -12,12 +12,17 @@ module.exports = {
       {
         type: 'category',
         label: 'Tray Functions',
-        items: ['doc2'],
+        items: ['addTray'],
+      },
+      {
+        type: 'category',
+        label: 'Bay Functions',
+        items: ['addBay'],
       },
       {
         type: 'category',
         label: 'Zone Functions',
-        items: ['doc1'],
+        items: ['addZone'],
       },
 
 

@@ -1,9 +1,9 @@
 ---
-id: $IDENTIFIER
-title: $TITLE
+id: getTraysInBay
+title: getTraysInBay
 ---
 
-Switches the position of two trays
+Gets the trays in a given Bay
 ## URL
 ```http request
 POST /stockTake/$ENDPOINT
@@ -12,16 +12,16 @@ POST /stockTake/$ENDPOINT
 ## Input
 ```json
 {
-  "": "",
+  "zone": "Specified zone",
+  "bay": "Specified bay"
 }
 ```
 
 ### Parameters
-| Parameter | Type | Description |
-| --------- | :--: | :---------: |
-||||
+| Parameter        |      Type     |   Description |
+| ------------- | :-----------: | :-----: |
+| `zone`     | `string` | The zone you want info about |
+| `bay`      |   `string`    |  The bay you want info about|
 
 ## Output
-`OK` if successful
-
-`FAIL` if unsuccessful
+An array of the trays in the bay
