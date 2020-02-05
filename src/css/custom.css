@@ -14,7 +14,6 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
-  --ifm-table-stripe-background: white
 }
 
 .docusaurus-highlight-code-line {
@@ -24,4 +23,7 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
+table tr:nth-child(2n){
+  all: revert;
+}
 
