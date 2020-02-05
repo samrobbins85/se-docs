@@ -10,7 +10,7 @@ module.exports = {
     navbar: {
       title: '',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Foodbank',
         src: 'https://durham.foodbank.org.uk/wp-content/uploads/sites/153/2016/05/Durham-Three-Colour-logo.png',
       },
       links: [

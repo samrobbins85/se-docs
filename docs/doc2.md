@@ -1,6 +1,6 @@
 ---
 id: doc2
-title: AddTray
+title: addTray
 ---
 
 Adds a new tray to the warehouse
