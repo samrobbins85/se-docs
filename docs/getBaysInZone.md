@@ -1,12 +1,12 @@
 ---
-id: $IDENTIFIER
-title: $TITLE
+id: getBaysInZone
+title: This call has not been implemented yet 
 ---
 
 Switches the position of two trays
 ## URL
 ```http request
-POST /stockTake/$ENDPOINT
+POST /stockTake/getZone
 ```
 
 ## Input
