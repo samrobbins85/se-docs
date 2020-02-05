@@ -6,7 +6,7 @@ title: getTraysInBay
 Gets the trays in a given Bay
 ## URL
 ```http request
-POST /stockTake/$ENDPOINT
+POST /stockTake/getTraysInBay
 ```
 
 ## Input
