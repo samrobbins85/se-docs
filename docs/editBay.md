@@ -1,12 +1,12 @@
 ---
-id: $IDENTIFIER
-title: $TITLE
+id: editBay
+title: This call has not been implemented yet
 ---
 
-Switches the position of two trays
+Edit the attributes of a bay.
 ## URL
 ```http request
-POST /stockTake/$ENDPOINT
+POST /stockTake/editBay
 ```
 
 ## Input

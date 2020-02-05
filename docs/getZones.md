@@ -1,27 +1,18 @@
 ---
-id: $IDENTIFIER
-title: $TITLE
+id: getZones
+title: getZones
 ---
 
-Switches the position of two trays
+Gets all zones in the database
 ## URL
 ```http request
-POST /stockTake/$ENDPOINT
+GET /stockTake/getZones
 ```
 
 ## Input
 ```json
-{
-  "": "",
-}
+None 
 ```
 
-### Parameters
-| Parameter | Type | Description |
-| --------- | :--: | :---------: |
-||||
-
 ## Output
-`OK` if successful
-
-`Fail` if unsuccessful
+Returns an array of all zone identifiers

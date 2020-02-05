@@ -1,12 +1,12 @@
 ---
-id: $IDENTIFIER
-title: $TITLE
+id: editZone
+title: This call has not been implemented yet 
 ---
 
-Switches the position of two trays
+Edit the target zone's attributes
 ## URL
 ```http request
-POST /stockTake/$ENDPOINT
+POST /stockTake/editZone
 ```
 
 ## Input
