@@ -7,17 +7,17 @@
 
 module.exports = {
   someSidebar: {
-    Docusaurus: ['doc3'],
+    Introduction: ['gettingstarted'],
     "Back End" : [
       {
         type: 'category',
         label: 'Tray Functions',
-        items: ['doc1', 'doc2'],
+        items: ['doc2'],
       },
       {
         type: 'category',
         label: 'Zone Functions',
-        items: ['doc1', 'doc2'],
+        items: ['doc1'],
       },
 
 

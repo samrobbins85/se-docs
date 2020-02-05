@@ -3,18 +3,18 @@ module.exports = {
   tagline: 'Group 12',
   url: 'https://se-docs.now.sh',
   baseUrl: '/',
-  favicon: 'img/favicon.ico',
+  favicon: 'https://durham.foodbank.org.uk/wp-content/uploads/sites/153/2016/05/Durham-Three-Colour-logo.png',
   organizationName: 'samrobbins85', // Usually your GitHub org/user name.
   projectName: 'se-docs', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'Foodbank',
+      title: '',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'https://durham.foodbank.org.uk/wp-content/uploads/sites/153/2016/05/Durham-Three-Colour-logo.png',
       },
       links: [
-        {to: 'docs/doc1', label: 'Docs', position: 'left'},
+        {to: 'docs/gettingstarted', label: 'Docs', position: 'left'},
         // {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/samrobbins85/se-docs',
@@ -80,7 +80,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/samrobbins85/se-docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

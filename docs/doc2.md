@@ -1,6 +1,32 @@
 ---
 id: doc2
-title: Document Number 2
+title: AddTray
 ---
 
-This is a link to [another document.](doc3.md) This is a link to an [external page.](http://www.example.com)
+Adds a new tray to the warehouse
+## URL
+```http request
+POST /stockTake/addTray
+```
+
+## Input
+```json
+{
+  "zone": "Relevant zone",
+  "bay": "Relevant bay",
+  "tray": "Relevant tray"
+}
+```
+
+### Parameters 
+| Parameter        |      Type     |   Description |
+| ------------- | :-----------: | :-----: |
+| `zone`     | `string` | A valid zone in the warehouse |
+| `bay`      |   `string`    |  A valid bay in the warehouse |
+| `tray` |   `string`    |   The tray you want to add |
+
+
+## Output
+`OK` if successful
+
+`Fail` if unsuccessful
