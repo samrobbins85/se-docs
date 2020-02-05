@@ -28,10 +28,10 @@ POST /stockTake/switchTray
 ### Parameters
 | Parameter | Type | Description |
 | --------- | :--: | :---------: |
-|first|JSON Object|The position of the first tray to swap|
-|second|JSON Object|The position of the second tray to swap|
+|`first`|`JSON Object`|The position of the first tray to swap|
+|`second`|`JSON Object`|The position of the second tray to swap|
 
 ## Output
 `OK` if successful
 
-`Fail` if unsuccessful
+`FAIL` if unsuccessful

@@ -24,4 +24,4 @@ POST /stockTake/editBay
 ## Output
 `OK` if successful
 
-`Fail` if unsuccessful
+`FAIL` if unsuccessful
