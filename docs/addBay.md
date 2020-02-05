@@ -1,6 +1,6 @@
 ---
 id: addBay
-title: addBay - WIP, currently not implemented
+title: addBay - WIP
 ---
 
 Adds a new bay to the warehouse

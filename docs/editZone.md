@@ -1,6 +1,6 @@
 ---
 id: editZone
-title: This call has not been implemented yet 
+title: editZone - WIP
 ---
 
 Edit the target zone's attributes

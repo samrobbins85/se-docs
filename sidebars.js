@@ -12,17 +12,17 @@ module.exports = {
       {
         type: 'category',
         label: 'Tray Functions',
-        items: ['addTray','removeTray','switchTray','editTray'],
+        items: ['addTray','removeTray','switchTray','editTray','moveTray'],
       },
       {
         type: 'category',
         label: 'Bay Functions',
-        items: ['addBay'],
+        items: ['addBay','editBay','getTraysInBay'],
       },
       {
         type: 'category',
         label: 'Zone Functions',
-        items: ['addZone'],
+        items: ['addZone','editZone','getBaysInZone','getZones'],
       },
 
 

@@ -1,6 +1,6 @@
 ---
 id: getBaysInZone
-title: This call has not been implemented yet 
+title: getBaysInZone - WIP
 ---
 
 Switches the position of two trays

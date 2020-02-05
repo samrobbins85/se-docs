@@ -1,6 +1,6 @@
 ---
 id: editBay
-title: This call has not been implemented yet
+title: editBay - WIP
 ---
 
 Edit the attributes of a bay.
