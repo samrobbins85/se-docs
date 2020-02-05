@@ -24,4 +24,4 @@ POST /stockTake/editZone
 ## Output
 `OK` if successful
 
-`Fail` if unsuccessful
+`FAIL` if unsuccessful
