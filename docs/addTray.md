@@ -14,7 +14,9 @@ POST /stockTake/addTray
 {
   "zone": "Relevant zone",
   "bay": "Relevant bay",
-  "tray": "Relevant tray"
+  "tray": "Relevant tray",
+  "xPos": "Relevant x position in bay",
+  "yPos": "Relevant y position in bay"
 }
 ```
 
@@ -24,6 +26,8 @@ POST /stockTake/addTray
 | `zone`     | `string` | A valid zone in the warehouse |
 | `bay`      |   `string`    |  A valid bay in the warehouse |
 | `tray` |   `string`    |   The tray you want to add |
+| `xPos` |   `integer`    |   The horizontal positional element of the tray within its bay |
+| `yPos` |   `integer`    |   The vertical positional element of the tray within its bay |
 
 
 ## Output

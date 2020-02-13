@@ -14,8 +14,7 @@ POST /stockTake/addZone
 {
   "zone": "Zone name",
   "height": 1,
-  "width": 1,
-  "bays": []
+  "width": 1
 }
 ```
 
@@ -25,7 +24,6 @@ POST /stockTake/addZone
 | `zone`     | `string` | The zone you want to add |
 | `height`      |   `integer`    |  The height you want the zone to be|
 | `width` |   `integer`    |  The width you want the zone to be|
-| `bays` |   `array`    |  An array of the bays in the zone |
 
 ## Output
 `OK` if successful
