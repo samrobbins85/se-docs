@@ -17,7 +17,8 @@ POST /stockTake/nextExpiring
 
 ### Parameters
 | Parameter | Type | Description |
-| `zone` | `integer` | Number of trays to fetch
+| ------ | :-------: | :------: |
+| `zone` | `integer` | Number of trays to fetch |
 
 ## Output
 Array of JSON Tray Objects if successful
