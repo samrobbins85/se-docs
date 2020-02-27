@@ -12,16 +12,16 @@ POST /stockTake/getZone
 ## Input
 ```json
 {
-  "": "",
+  "zone": "Target zone identifer",
 }
 ```
 
 ### Parameters
 | Parameter | Type | Description |
 | --------- | :--: | :---------: |
-||||
+|`zone`|`string`|The name of the zone containing the bays we wish to retrieve|
 
 ## Output
-`OK` if successful
+An array of trays is returned if successful
 
 `FAIL` if unsuccessful
