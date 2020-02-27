@@ -1,6 +1,6 @@
 ---
 id: getBaysInZone
-title: getBaysInZone - WIP
+title: getBaysInZone
 ---
 
 Switches the position of two trays
