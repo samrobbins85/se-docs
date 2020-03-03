@@ -9,7 +9,7 @@ collections:
   - name: 'docs'
     label: 'Docs'
     format: 'json'
-    folder: 'docs'
+    folder: 'docs/'
     create: true
     slug: '{{slug}}'
     editor:
