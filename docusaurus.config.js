@@ -73,6 +73,7 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} SE Group 12. Built with Docusaurus.`,
     },
   },
+  scripts: ["https://identity.netlify.com/v1/netlify-identity-widget.js"],
   presets: [
     [
       '@docusaurus/preset-classic',
