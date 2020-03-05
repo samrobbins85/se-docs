@@ -8,7 +8,7 @@
 module.exports = {
   someSidebar: {
     Introduction: ['gettingstarted'],
-    "Back End" : [
+    "Developer" : [
       {
         type: 'category',
         label: 'Tray Functions',
