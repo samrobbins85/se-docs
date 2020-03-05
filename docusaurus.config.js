@@ -7,6 +7,11 @@ module.exports = {
   organizationName: 'samrobbins85', // Usually your GitHub org/user name.
   projectName: 'se-docs', // Usually your repo name.
   themeConfig: {
+          algolia: {
+      apiKey: '215f825d24e083814163683edcef6754',
+      indexName: 'durham-foodbank-stock-take',
+      algoliaOptions: {}, // Optional, if provided by Algolia
+    },
     navbar: {
       title: '',
       logo: {
