@@ -1,15 +1,17 @@
 ---
-id: getBaysInZone
 title: getBaysInZone
+id: getBaysInZone
 ---
+Gets an array of all the bays in a specified zone
 
-Switches the position of two trays
 ## URL
-```http request
+
+```http
 POST /stockTake/getZone
 ```
 
 ## Input
+
 ```json
 {
   "zone": "Target zone identifer",
@@ -17,11 +19,13 @@ POST /stockTake/getZone
 ```
 
 ### Parameters
-| Parameter | Type | Description |
-| --------- | :--: | :---------: |
-|`zone`|`string`|The name of the zone containing the bays we wish to retrieve|
+
+| Parameter | Type     | Description                                                  |
+| --------- | -------- | ------------------------------------------------------------ |
+| `zone`    | `string` | The name of the zone containing the bays we wish to retrieve |
 
 ## Output
+
 An array of trays is returned if successful
 
 `FAIL` if unsuccessful
