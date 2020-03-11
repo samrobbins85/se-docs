@@ -20,6 +20,7 @@ POST /stockTake/nextExpiring
 | Parameter | Type | Description |
 | ------ | :-------: | :------: |
 | `n` | `integer` | Number of trays to fetch |
+| `contents` | `string` | String matching the contents of some tray in the warehouse|
 
 ## Output
 Array of JSON Tray Objects if successful
