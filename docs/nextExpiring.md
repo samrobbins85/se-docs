@@ -11,14 +11,15 @@ POST /stockTake/nextExpiring
 ## Input
 ```json
 {
-    "n": "Top n trays to fetch"
+    "n": "Top n trays to fetch",
+    "contents", "Optional, only get trays that match these contents"
 }
 ```
 
 ### Parameters
 | Parameter | Type | Description |
 | ------ | :-------: | :------: |
-| `zone` | `integer` | Number of trays to fetch |
+| `n` | `integer` | Number of trays to fetch |
 
 ## Output
 Array of JSON Tray Objects if successful
