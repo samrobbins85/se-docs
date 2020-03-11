@@ -12,7 +12,7 @@ module.exports = {
       {
         type: 'category',
         label: 'Tray Functions',
-        items: ['addTray','removeTray','switchTray','editTray','moveTray', 'nextExpiring'],
+        items: ['addTray','removeTray','switchTray','editTray','moveTray', 'nextExpiring', 'getAllCategory', 'addTrayMany', 'editTrayMany', 'removeTrayMany'],
       },
       {
         type: 'category',
