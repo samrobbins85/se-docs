@@ -8,6 +8,7 @@
 module.exports = {
   someSidebar: {
     Introduction: ['gettingstarted'],
+    Installation: ['Installation/frontEnd'],
     "Developer" : [
       {
         type: 'category',
