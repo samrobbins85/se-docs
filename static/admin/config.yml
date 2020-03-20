@@ -5,7 +5,7 @@ media_folder: static/img
 public_folder: /img
 collections:
   - name: 'docs'
-    label: 'Docs'
+    label: 'Introduction'
     folder: 'docs'
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
@@ -15,3 +15,26 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'ID', name: 'id', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'developer'
+    label: 'Developer'
+    folder: 'docs/Developer'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'ID', name: 'id', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'installation'
+    label: 'Installation'
+    folder: 'docs/Installation'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'ID', name: 'id', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
