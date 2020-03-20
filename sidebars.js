@@ -10,6 +10,7 @@ module.exports = {
     Introduction: ['gettingstarted'],
     Installation: ['Installation/frontEnd','Installation/backEnd','Installation/database'],
     "Developer" : [
+    'Developer/authentication',
       {
         type: 'category',
         label: 'Tray Functions',
