@@ -11,10 +11,10 @@ The process of transferring the account to one that you own is very simple:
 2. Under the applications tab on the dashboard create a new Generic application
 3. Copy the client ID from the application, as pictured below
 
-![auth0 client ID](../../static/img/auth0.png)
+![auth0 client ID](../../img/auth0.png)
 
 4. Paste this value under `clientID` in `auth_config.json`, which is located in the `src` folder of the `frontend` server 
 5. Also change the domain in the `auth_config.json` file, this domain can also be found in the application, as shown below
 
-![auth0 client ID](../../static/img/auth0_domain.png)
+![auth0 client ID](../../img/auth0_domain.png)
 
