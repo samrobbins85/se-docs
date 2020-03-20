@@ -1,6 +1,6 @@
 ---
 id: frontEnd
-title: Installing the front end
+title: Front end
 ---
 In our handover there is a folder named `frontend`, in this is stored the user interface with the program. It is a react app, and can be started with the command `npm install` followed by `npm start`, you will then be taken to a browser window with the application loaded.
 ## Deployment
@@ -15,7 +15,7 @@ This can be done in 3 steps
 
 1. Add the files to a GitHub, GitLab or Bitbucket repository
 2. Create an account [here](https://zeit.co/signup)
-3. Link together the repository and Zeit by clicking `Import Project`
+3. Link together the repository and ZEIT by clicking `Import Project`
 
 ### Command line
 1. Install npm using the instructions [here](https://www.npmjs.com/get-npm)
