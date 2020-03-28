@@ -2,7 +2,7 @@
 id: api-expansion
 title: API Expansion
 ---
-Once the handover has been completed, you may wish to add your own API endpoints to expand the functionality of the application further. In this document I will detail how to do this.
+Once the handover has been completed, you may wish to add your own API endpoints to expand the functionality of the application further. In this document I will detail how to do this. This document is aimed towards technical users who have some experience with javascript before.
 
 ## Writing Back-end Functions
 Most of the back-end functions are written so that they can be tested with only a connection to a MongoDB server (No connection to the front end required). Connections with the front end and MongoDB server are handled by other functions in `routes/stockTake.js`, so when writing back-end functions we can assume that we have an existing connection to a MongoDB server and that some other function will handle communicating the result to the front end.
@@ -114,3 +114,10 @@ async function functionName(arg_1, arg_2, ..., arg_n) {
     return "FAIL";
 }
 ```
+
+## Recompiling
+Javascript is a scripting language and does not require recompiling after changes have been made. However, changes to the back-end will require a restart of the back-end server before the changes will be reflected. Changes will also need to be redeployed to whatever hosting service you have chosen to use.
+
+## Additional Information
+The above information should allow technical users to make simple changes to the back-end so they can add their own features. For more complex changes, you should consult the MongoDB documentation (for communication with the MongoDB database) and the express server and node documentation (for communication between the front and back end).
+
