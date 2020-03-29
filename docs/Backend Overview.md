@@ -11,7 +11,11 @@ The MongoDB database is where the data describing the contents and structure of 
 The express server acts as a middle-man between the clients and the MongoDB and provides a number of useful API functions to interface with the database. It provides error handling between the client and server, and between the server and the database, ensuring that the whole system remains robust and to ensure consistency. Details on how to install and deploy the express server are also in the Installation section.
 
 ## Back-end Functions
-In this section I will give a brief overview of all back-end functions in `routes/stockTake.js`
+In this section I will give a brief overview of all back-end functions in `routes/stockTake.js`.
+
+Before that, some terminology: a "object" refers to a representation of some concept or thing in a computer. For example, a tray object refers to the representation of a tray within the database (and so will contain attributes such as weights and contents corresponding to the real life tray in the warehouse).
+
+A slightly less intuitive example is the MongoDB database object required by most back-end functions. This is simply a interface so we can make queries and edit the real database without having to concern ourselves with the technical details of connecting to the database and creating requests.
 
 ### addTray
 When provided with a tray object and a MongoDB database object, this function will add the contents of the tray object to the database.
