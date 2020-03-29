@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Durham Foodbank Stock Take',
   tagline: 'Group 12',
-  url: 'https://se-docs.now.sh',
+  url: 'https://se-docs.netlify.com',
   baseUrl: '/',
   favicon: 'https://durham.foodbank.org.uk/wp-content/uploads/sites/153/2016/05/Durham-Three-Colour-logo.png',
   organizationName: 'samrobbins85', // Usually your GitHub org/user name.
