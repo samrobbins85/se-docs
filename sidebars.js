@@ -7,10 +7,10 @@
 
 module.exports = {
   someSidebar: {
-    Introduction: ['gettingstarted'],
-    Installation: ['Installation/frontEnd','Installation/backEnd','Installation/database'],
+    Introduction: ['gettingstarted','backendoverview'],
+    Installation: ['Installation/frontEnd','Installation/backEnd','Installation/database','Installation/authentication'],
+    Expansion: ['Expansion/api-expansion','Expansion/database-expansion','Expansion/auth-expansion'],
     "Developer" : [
-    'Developer/authentication',
       {
         type: 'category',
         label: 'Tray Functions',
@@ -24,7 +24,7 @@ module.exports = {
       {
         type: 'category',
         label: 'Zone Functions',
-        items: ['Developer/addZone','Developer/editZone','Developer/getBaysInZone','Developer/getZones'],
+        items: ['Developer/addZone','Developer/editZone','Developer/getBaysInZone','Developer/getZones','Developer/removeZone'],
       },
 
 
