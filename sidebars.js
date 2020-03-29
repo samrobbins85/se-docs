@@ -9,7 +9,7 @@ module.exports = {
   someSidebar: {
     Introduction: ['gettingstarted','backendoverview'],
     Installation: ['Installation/frontEnd','Installation/backEnd','Installation/database'],
-    Expansion: ['Expansion/api-expansion'],
+    Expansion: ['Expansion/api-expansion','Expansion/database-expansion'],
     "Developer" : [
     'Developer/authentication',
       {
