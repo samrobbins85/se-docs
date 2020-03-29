@@ -37,4 +37,15 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'ID', name: 'id', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'expansion'
+    label: 'Expansion'
+    folder: 'docs/Expansion'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'ID', name: 'id', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
 

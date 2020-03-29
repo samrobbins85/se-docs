@@ -20,6 +20,7 @@ module.exports = {
       },
       links: [
         {to: 'docs/gettingstarted', label: 'Docs', position: 'left'},
+        {href: './admin', label: 'Admin', position: 'right'},
         // {to: 'blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/samrobbins85/se-docs',
