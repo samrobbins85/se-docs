@@ -21,4 +21,7 @@ The process of transferring the account to one that you own is very simple:
 
 <img alt="Auth0 Domain" src={useBaseUrl('img/auth0_domain.png')} />
 
+6. Disable signups by going to the connections tab of the dashboard, clicking on `Username-Password-Authentication`, then turning on the disable signups option as shown below
+<img alt="Disable Signup" src={useBaseUrl('img/auth0/disable_signup.png')} />
 
+This is done as otherwise any user could come and sign up for the system without permission

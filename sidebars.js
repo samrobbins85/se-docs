@@ -8,10 +8,9 @@
 module.exports = {
   someSidebar: {
     Introduction: ['gettingstarted','backendoverview'],
-    Installation: ['Installation/frontEnd','Installation/backEnd','Installation/database'],
-    Expansion: ['Expansion/api-expansion','Expansion/database-expansion'],
+    Installation: ['Installation/frontEnd','Installation/backEnd','Installation/database','Installation/authentication'],
+    Expansion: ['Expansion/api-expansion','Expansion/database-expansion','Expansion/auth-expansion'],
     "Developer" : [
-    'Developer/authentication',
       {
         type: 'category',
         label: 'Tray Functions',
