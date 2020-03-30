@@ -19,7 +19,7 @@ module.exports = {
       {
         type: 'category',
         label: 'Bay Functions',
-        items: ['Developer/addBay','Developer/editBay','Developer/getTraysInBay'],
+        items: ['Developer/addBay','Developer/removeBay','Developer/editBay','Developer/getTraysInBay'],
       },
       {
         type: 'category',
