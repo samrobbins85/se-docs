@@ -19,8 +19,8 @@ POST /stockTake/addTray
   "contents": "What is in the tray",
   "weight": "How much does it weigh",
   "expiry": "When does it expire",
-  "xPos": "The x position of each tray in the bay, i.e. leftmost tray has xPos = 1",
-  "yPos": "The y position of each tray in the bay, i.e. bottommost tray has yPos = 1"
+  "xPos": "The x position of each tray in the bay, i.e. leftmost tray has xPos = 0",
+  "yPos": "The y position of each tray in the bay, i.e. topmost tray has yPos = 0"
 }
 ```
 
