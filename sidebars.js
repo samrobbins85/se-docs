@@ -7,11 +7,11 @@
 
 module.exports = {
   someSidebar: {
+    Introduction: ['Introduction'],
+    Installation: ['Installation/frontEnd','Installation/backEnd','Installation/database','Installation/authentication'],
     "User Interface Walkaround": ['ui/overview','ui/stocktaking','ui/reports'],
     // "": ['ui/overview','ui/stocktaking','ui/reports'],
-    Introduction: ['gettingstarted','backendoverview','frontendoverview'],
-    Installation: ['Installation/frontEnd','Installation/backEnd','Installation/database','Installation/authentication'],
-    Expansion: ['Expansion/api-expansion','Expansion/database-expansion','Expansion/auth-expansion'],
+    "System Overview": ['gettingstarted','backendoverview','frontendoverview'],
     "Developer" : [
       {
         type: 'category',
@@ -28,6 +28,7 @@ module.exports = {
         label: 'Zone Functions',
         items: ['Developer/addZone','Developer/editZone','Developer/getBaysInZone','Developer/getZones','Developer/removeZone'],
       },
-    ],
+    ],  
+    Expansion: ['Expansion/api-expansion','Expansion/database-expansion','Expansion/auth-expansion'],
   },
 };
