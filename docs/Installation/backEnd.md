@@ -2,7 +2,7 @@
 title: Back end
 id: backEnd
 ---
-In our handover there is a folder named `backend`, in this is stored the server that manages the requests made in the website. It is built using Node.js and Express and can be started with `npm install` followed by `npm start`, the server will then be hosted on port **3000**
+In our handover there is a folder named `backend`, in this is stored the server that manages the requests made in the website. It is built using Node.js and Express and can be started with `npm install` followed by `npm start`, the server will then be hosted on port **3001**
 
 When both the front end have been started, requests can be made between them
 
