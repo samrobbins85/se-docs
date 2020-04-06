@@ -4,13 +4,13 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
+const {listPaths} = require('./src/plugins/components');
+let ui = listPaths("ui");
 module.exports = {
   someSidebar: {
     Introduction: ['Introduction'],
-    Installation: ['Installation/frontEnd','Installation/backEnd','Installation/database','Installation/authentication'],
-    "User Interface Walkaround": ['ui/overview','ui/stocktaking','ui/reports'],
-    // "": ['ui/overview','ui/stocktaking','ui/reports'],
+    Installation: listPaths("Installation"),
+    "User Interface Walkaround": ui,
     "System Overview": ['gettingstarted','backendoverview','frontendoverview'],
     "Developer" : [
       {
@@ -29,6 +29,6 @@ module.exports = {
         items: ['Developer/addZone','Developer/editZone','Developer/getBaysInZone','Developer/getZones','Developer/removeZone'],
       },
     ],  
-    Expansion: ['Expansion/api-expansion','Expansion/database-expansion','Expansion/auth-expansion'],
+    Expansion: listPaths("Expansion"),
   },
 };
