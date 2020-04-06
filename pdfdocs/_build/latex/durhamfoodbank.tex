@@ -72,7 +72,7 @@
 
 
 \title{Durham Foodbank}
-\date{Mar 08, 2020}
+\date{Mar 30, 2020}
 \release{1.0.0}
 \author{Group 12}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -89,176 +89,367 @@
 
 
 
-\chapter{Bay Functions}
-\label{\detokenize{index:bay-functions}}
-This describes all the bay functions
+\chapter{Introduction}
+\label{\detokenize{index:introduction}}
+To get started with this code, first clone the git repository at
+\sphinxurl{https://github.com/samrobbins85/software-engineering-12} using
 
-
-\section{AddBay}
-\label{\detokenize{addBay:addbay}}\label{\detokenize{addBay::doc}}
-Adds a new bay to the warehouse
-
-
-\subsection{URL}
-\label{\detokenize{addBay:url}}
-\sphinxcode{\sphinxupquote{http request POST /stockTake/addBay}}
-
-
-\subsection{Input}
-\label{\detokenize{addBay:input}}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{p}{\PYGZob{}}
-  \PYG{n+nt}{\PYGZdq{}bay\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Bay Name\PYGZdq{}}\PYG{p}{,}
-  \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Zone Name\PYGZdq{}}\PYG{p}{,}
-  \PYG{n+nt}{\PYGZdq{}xVal\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}x Position of bay in zone\PYGZdq{}}\PYG{p}{,}
-  \PYG{n+nt}{\PYGZdq{}yVal\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}y Position of bay in zone\PYGZdq{}}\PYG{p}{,}
-  \PYG{n+nt}{\PYGZdq{}xSize\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}x Size of the bay\PYGZdq{}}\PYG{p}{,}
-  \PYG{n+nt}{\PYGZdq{}ySize\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}y Size of the bay\PYGZdq{}}
-\PYG{p}{\PYGZcb{}}
+\PYG{n}{git} \PYG{n}{clone} \PYG{n}{https}\PYG{p}{:}\PYG{o}{/}\PYG{o}{/}\PYG{n}{github}\PYG{o}{.}\PYG{n}{com}\PYG{o}{/}\PYG{n}{samrobbins85}\PYG{o}{/}\PYG{n}{software}\PYG{o}{\PYGZhy{}}\PYG{n}{engineering}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{12.}\PYG{n}{git}
 \end{sphinxVerbatim}
 
+Then move into the directory created
 
-\subsubsection{Parameters}
-\label{\detokenize{addBay:parameters}}
+Then run
 
-\begin{savenotes}\sphinxattablestart
-\centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|}
-\hline
-\sphinxstyletheadfamily 
-Parameter
-&\sphinxstyletheadfamily 
-Type
-&\sphinxstyletheadfamily 
-Description
-\\
-\hline
-\sphinxcode{\sphinxupquote{bay}}
-&
-\sphinxcode{\sphinxupquote{string}}
-&
-Bay identifier string
-\\
-\hline
-\sphinxcode{\sphinxupquote{zone}}
-&
-\sphinxcode{\sphinxupquote{string}}
-&
-Zone identifier of zone the bay is in
-\\
-\hline
-\sphinxcode{\sphinxupquote{xVal}}
-&
-\sphinxcode{\sphinxupquote{integer}}
-&
-x Position of the bay within the given zone
-\\
-\hline
-\sphinxcode{\sphinxupquote{yVal}}
-&
-\sphinxcode{\sphinxupquote{integer}}
-&
-y Position of the bay within the given zone
-\\
-\hline
-\sphinxcode{\sphinxupquote{xSize}}
-&
-\sphinxcode{\sphinxupquote{integer}}
-&
-x size of the bay (number of columns for trays)
-\\
-\hline
-\sphinxcode{\sphinxupquote{ySize}}
-&
-\sphinxcode{\sphinxupquote{integer}}
-&
-y size of the bay (number of rows for trays)
-\\
-\hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
-
-
-\subsection{Output}
-\label{\detokenize{addBay:output}}
-\sphinxcode{\sphinxupquote{OK}} if successful
-
-\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
-
-
-\chapter{Zone Functions}
-\label{\detokenize{index:zone-functions}}
-This describes all the zone functions
-
-
-\section{AddZone}
-\label{\detokenize{addZone:addzone}}\label{\detokenize{addZone::doc}}
-Adds a new zone to the warehouse
-
-
-\subsection{URL}
-\label{\detokenize{addZone:url}}
-\sphinxcode{\sphinxupquote{http request POST /stockTake/addZone}}
-
-
-\subsection{Input}
-\label{\detokenize{addZone:input}}
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{p}{\PYGZob{}}
-  \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Zone name\PYGZdq{}}\PYG{p}{,}
-  \PYG{n+nt}{\PYGZdq{}height\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,}
-  \PYG{n+nt}{\PYGZdq{}width\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}
-\PYG{p}{\PYGZcb{}}
+\PYG{n}{npm} \PYG{n}{install}
 \end{sphinxVerbatim}
 
+And run
 
-\subsubsection{Parameters}
-\label{\detokenize{addZone:parameters}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{npm} \PYG{n}{start}
+\end{sphinxVerbatim}
 
-\begin{savenotes}\sphinxattablestart
-\centering
-\begin{tabulary}{\linewidth}[t]{|T|T|T|}
-\hline
-\sphinxstyletheadfamily 
-Parameter
-&\sphinxstyletheadfamily 
-Type
-&\sphinxstyletheadfamily 
-Description
-\\
-\hline
-\sphinxcode{\sphinxupquote{zone}}
-&
-\sphinxcode{\sphinxupquote{string}}
-&
-The zone you want to add
-\\
-\hline
-\sphinxcode{\sphinxupquote{height}}
-&
-\sphinxcode{\sphinxupquote{integer}}
-&
-The height you want the zone to be
-\\
-\hline
-\sphinxcode{\sphinxupquote{width}}
-&
-\sphinxcode{\sphinxupquote{integer}}
-&
-The width you want the zone to be
-\\
-\hline
-\end{tabulary}
-\par
-\sphinxattableend\end{savenotes}
+to start the server
 
 
-\subsection{Output}
-\label{\detokenize{addZone:output}}
-\sphinxcode{\sphinxupquote{OK}} if successful
+\section{System Structure}
+\label{\detokenize{docs/Introduction/Backend_overview:system-structure}}\label{\detokenize{docs/Introduction/Backend_overview::doc}}
+The whole system composes of three primary components: the MongoDB
+Database, the Express Server (which I will also refer to as the back\sphinxhyphen{}end
+server) and any number of clients running the front\sphinxhyphen{}end program.
 
-\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+The MongoDB database is where the data describing the contents and
+structure of the warehouse will be stored so that it can be accessed and
+edited by warehouse employees. We chose to use MongoDB as it is both
+easily extensible and flexible. Details on the exact structure of the
+database can be found in the Installation section.
+
+The express server acts as a middle\sphinxhyphen{}man between the clients and the
+MongoDB and provides a number of useful API functions to interface with
+the database. It provides error handling between the client and server,
+and between the server and the database, ensuring that the whole system
+remains robust and to ensure consistency. Details on how to install and
+deploy the express server are also in the Installation section.
+
+
+\section{Back\sphinxhyphen{}end Functions}
+\label{\detokenize{docs/Introduction/Backend_overview:back-end-functions}}
+In this section I will give a brief overview of all back\sphinxhyphen{}end functions
+in \sphinxcode{\sphinxupquote{routes/stockTake.js}}
+
+
+\subsection{addTray}
+\label{\detokenize{docs/Introduction/Backend_overview:addtray}}
+When provided with a tray object and a MongoDB database object, this
+function will add the contents of the tray object to the database.
+
+
+\subsection{editTray}
+\label{\detokenize{docs/Introduction/Backend_overview:edittray}}
+When provided with a tray object and a MongoDB database object, this
+function will update the contents of an existing tray object in the
+database, provided it exists.
+
+
+\subsection{removeTray}
+\label{\detokenize{docs/Introduction/Backend_overview:removetray}}
+When provided with the location of a tray object and a MongoDB database
+object, this function will delete the tray from the database.
+
+
+\subsection{switchTray}
+\label{\detokenize{docs/Introduction/Backend_overview:switchtray}}
+When provided with the location of two different tray objects and a
+MongoDB database object, this function with swap the positions of two
+trays in the database.
+
+
+\subsection{addTrayMany}
+\label{\detokenize{docs/Introduction/Backend_overview:addtraymany}}
+When provided with an array of tray objects and a MongoDB database
+object, this function will add all the tray objects to the database in a
+single command. This should be used if many trays are added at once, as
+adding them one\sphinxhyphen{}by\sphinxhyphen{}one will take an unacceptable amount of time.
+
+
+\subsection{editTrayMany}
+\label{\detokenize{docs/Introduction/Backend_overview:edittraymany}}
+When provided with an array of tray objects and a MongoDB database
+object, this function will edit all the tray objects that are in the
+database in a single command. This should be used if many trays are
+edited at once, as editing them one\sphinxhyphen{}by\sphinxhyphen{}one will take an unacceptable
+amount of time.
+
+
+\subsection{removeTrayMany}
+\label{\detokenize{docs/Introduction/Backend_overview:removetraymany}}
+When provided with an array of tray locations and a MongoDB database
+object, this function will remove all the trays at the positions
+specified. This should be used if many trays are deleted at once, as
+deleting them one\sphinxhyphen{}by\sphinxhyphen{}one will take an unacceptable amount of time.
+
+
+\subsection{getAllCategory}
+\label{\detokenize{docs/Introduction/Backend_overview:getallcategory}}
+When provided with a category and a MongoDB database object, this
+function will return all trays with a matching category. This can be
+used to quickly obtain the locations of items of a specific type.
+
+
+\subsection{getNextNExpiring}
+\label{\detokenize{docs/Introduction/Backend_overview:getnextnexpiring}}
+When provided with a number N, an optional category argument and a
+MongoDB database object, this function will return the next N expiring
+trays. If a category is specified, it will return the next N expiring in
+that category only. This can be useful if we wish to find the items
+closest to expiring so that we can focus on taking them from the
+warehouse first.
+
+
+\subsection{getZones}
+\label{\detokenize{docs/Introduction/Backend_overview:getzones}}
+This function, when provided with a MongoDB database object, simply
+returns all zones in the warehouse.
+
+
+\subsection{addZone}
+\label{\detokenize{docs/Introduction/Backend_overview:addzone}}
+When provided with a zone object and a MongoDB database object, the zone
+will be added to the database. This can be used in the initial creation
+of the warehouse and to add zones temporarily when there is a need to
+meet a higher than normal capacity.
+
+
+\subsection{editZone}
+\label{\detokenize{docs/Introduction/Backend_overview:editzone}}
+When provided with a zone object and a MongoDB database object, the zone
+in the database will be edited, provided that it does exist.
+
+
+\subsection{removeZone}
+\label{\detokenize{docs/Introduction/Backend_overview:removezone}}
+When provided with a zone location and a MongoDB database object, the
+zone will be removed from the database.
+
+
+\subsection{addBay}
+\label{\detokenize{docs/Introduction/Backend_overview:addbay}}
+When provided with a bay object and a MongoDB database object, the bay
+will be added to the database.
+
+
+\subsection{editBay}
+\label{\detokenize{docs/Introduction/Backend_overview:editbay}}
+When provided with a bay object and a MongoDB database object, the bay
+will be edited, provided it does exist.
+
+
+\subsection{removeBay}
+\label{\detokenize{docs/Introduction/Backend_overview:removebay}}
+When provided with the location of the bay and a MongoDB database
+object, the bay will be removed from the database.
+
+
+\subsection{getTraysInBay}
+\label{\detokenize{docs/Introduction/Backend_overview:gettraysinbay}}
+When provided with the location of a bay and a MongoDB database object,
+the function will return a list of all tray objects inside that bay,
+provided the bay exists. This will be used to display bay contents in
+the front\sphinxhyphen{}end application.
+
+
+\subsection{getBaysInZone}
+\label{\detokenize{docs/Introduction/Backend_overview:getbaysinzone}}
+When provided with the location of a zone and a MongoDB database object,
+the function will return a list of all the bay objects inside that zone,
+provided the zone exists.
+
+
+\subsection{moveTray}
+\label{\detokenize{docs/Introduction/Backend_overview:movetray}}
+When provided with two tray locations and a MongoDB database object, the
+function will move the tray from one location to another provided a tray
+exists in the start location and does not exist in the end position.
+
+
+\subsection{mongoUpdate}
+\label{\detokenize{docs/Introduction/Backend_overview:mongoupdate}}
+This function takes a request body and a method code. It will first
+connect to the MongoDB database to get the database object. Then, using
+the method code, it will pass the request body to one of the functions
+described above. It is then responsible for handling errors that occur
+and returning the result to the front\sphinxhyphen{}end.
+
+
+\chapter{Installation}
+\label{\detokenize{index:installation}}
+
+\section{Authentication}
+\label{\detokenize{docs/Installation/authentication:authentication}}\label{\detokenize{docs/Installation/authentication::doc}}
+Authentication for the website is handled through
+\sphinxhref{https://auth0.com/}{Auth0} the free tier allows for up to 7000
+users, which should be more than ample.
+
+The process of transferring the account to one that you own is very
+simple:
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+Sign up for Auth0 \sphinxhref{https://auth0.com/signup}{here}
+
+\item {} 
+Under the applications tab on the dashboard create a new Generic
+application
+
+\item {} 
+Copy the client ID from the application, as pictured below
+
+\end{enumerate}
+
+\noindent\sphinxincludegraphics[width=300\sphinxpxdimen]{{auth0}.png}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\setcounter{enumi}{3}
+\item {} 
+Paste this value under \sphinxcode{\sphinxupquote{clientID}} in \sphinxcode{\sphinxupquote{auth\_config.json}}, which is
+located in the \sphinxcode{\sphinxupquote{src}} folder of the \sphinxcode{\sphinxupquote{frontend}} server
+
+\item {} 
+Also change the domain in the \sphinxcode{\sphinxupquote{auth\_config.json}} file, this domain
+can also be found in the application, as shown below
+
+\item {} 
+Disable signups by going to the connections tab of the dashboard,
+clicking on \sphinxcode{\sphinxupquote{Username\sphinxhyphen{}Password\sphinxhyphen{}Authentication}}, then turning on the
+disable signups option as shown below
+
+\end{enumerate}
+
+This is done as otherwise any user could come and sign up for the system
+without permission
+
+
+\section{Backend}
+\label{\detokenize{docs/Installation/backEnd:backend}}\label{\detokenize{docs/Installation/backEnd::doc}}
+In our handover there is a folder named \sphinxcode{\sphinxupquote{backend}}, in this is stored
+the server that manages the requests made in the website. It is built
+using Node.js and Express and can be started with \sphinxcode{\sphinxupquote{npm install}}
+followed by \sphinxcode{\sphinxupquote{npm start}}, the server will then be hosted on port
+\sphinxstylestrong{3000}
+
+When both the front end have been started, requests can be made between
+them \#\# Deployment Our recommendation for deploying this is on
+\sphinxhref{https://www.heroku.com/}{heroku} as it has a good free tier and has
+suitable pricing plans for expanding if usage increases.
+
+It is also simple to set up:
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+Create an account \sphinxhref{https://signup.heroku.com/}{here}
+
+\item {} 
+Click the new button on your dashboard to create a new application
+
+\item {} 
+Give it a name and set the region to Europe
+
+\item {} 
+Follow the on screen instructions to get your code deployed
+
+\end{enumerate}
+
+
+\section{Database}
+\label{\detokenize{docs/Installation/database:database}}\label{\detokenize{docs/Installation/database::doc}}
+For this application to run it also needs a database set up, for this we
+have chosen \sphinxhref{https://www.mongodb.com/}{MongoDB}.
+
+
+\subsection{Deployment}
+\label{\detokenize{docs/Installation/database:deployment}}
+Our recommendation for deployment is to use \sphinxhref{https://www.mongodb.com/cloud/atlas}{MongoDB
+Atlas} this has a free tier but
+allows for scaling up to a paid plan if your requirements exceed the
+limits of the free tier.
+
+To get started sign up \sphinxhref{https://www.mongodb.com/cloud/atlas}{here}
+then choose any of the cloud providers, and select a local cluster with
+a free tier
+
+Once this is done, a particular structure of the database will need to
+be established if you don’t want to change the code
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+Create a database named \sphinxcode{\sphinxupquote{foodbank}}
+
+\item {} 
+Create 4 collections, \sphinxcode{\sphinxupquote{bays}}, \sphinxcode{\sphinxupquote{dummy}}, \sphinxcode{\sphinxupquote{food}} and \sphinxcode{\sphinxupquote{zones}} in
+that database
+
+\end{enumerate}
+
+If you do want to change the names of the database or collections,
+please consult the expansion section of this user guide.
+
+
+\section{Frontend}
+\label{\detokenize{docs/Installation/frontEnd:frontend}}\label{\detokenize{docs/Installation/frontEnd::doc}}
+In our handover there is a folder named \sphinxcode{\sphinxupquote{frontend}}, in this is stored
+the user interface with the program. It is a react app, and can be
+started with the command \sphinxcode{\sphinxupquote{npm install}} followed by \sphinxcode{\sphinxupquote{npm start}}, you
+will then be taken to a browser window with the application loaded. \#\#
+Deployment The code can be deployed using any static hosting, our
+recommendation is \sphinxhref{https://zeit.co/}{ZEIT Now} as they have a very
+generous free tier and it is very easy to get set up. There are two main
+ways of getting set up
+
+
+\subsection{Git Repository}
+\label{\detokenize{docs/Installation/frontEnd:git-repository}}
+\sphinxstyleemphasis{If you don’t know what this is, then proceed to the other option.}
+
+For continuous development, this is a better option as any changes you
+make will be automatically deployed to the website.
+
+This can be done in 3 steps
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+Add the files to a GitHub, GitLab or Bitbucket repository
+
+\item {} 
+Create an account \sphinxhref{https://zeit.co/signup}{here}
+
+\item {} 
+Link together the repository and ZEIT by clicking \sphinxcode{\sphinxupquote{Import Project}}
+
+\end{enumerate}
+
+
+\subsection{Command line}
+\label{\detokenize{docs/Installation/frontEnd:command-line}}\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+Install npm using the instructions
+\sphinxhref{https://www.npmjs.com/get-npm}{here}
+
+\item {} 
+Create a ZEIT account \sphinxhref{https://zeit.co/signup}{here}
+
+\item {} 
+Install the Now CLI using the instructions
+\sphinxhref{https://zeit.co/download}{here}
+
+\item {} 
+The code can then be deployed with the command \sphinxcode{\sphinxupquote{now}}, as documented
+\sphinxhref{https://zeit.co/docs/v2/platform/deployments\#now-cli}{here}
+
+\end{enumerate}
 
 
 

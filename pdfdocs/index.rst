@@ -8,26 +8,25 @@ Welcome to Flask
 
 
 
-Bay Functions
+Introduction
 ------------
 
-This describes all the bay functions
 
 .. toctree::
    :maxdepth: 2
 
-   addBay
+   docs/Introduction/Gettingstarted
+   docs/Introduction/Backend_overview
 
-
-Zone Functions
+Installation
 -------------
 
-This describes all the zone functions
-
 .. toctree::
    :maxdepth: 2
 
-   addZone
-
+   docs/Installation/authentication
+   docs/Installation/backEnd
+   docs/Installation/database
+   docs/Installation/frontEnd
 
 

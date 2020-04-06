@@ -1,13 +1,32 @@
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {1}Bay Functions}{1}{chapter.1}% 
-\contentsline {section}{\numberline {1.1}AddBay}{1}{section.1.1}% 
-\contentsline {subsection}{\numberline {1.1.1}URL}{1}{subsection.1.1.1}% 
-\contentsline {subsection}{\numberline {1.1.2}Input}{1}{subsection.1.1.2}% 
-\contentsline {subsubsection}{Parameters}{2}{subsubsection*.3}% 
-\contentsline {subsection}{\numberline {1.1.3}Output}{2}{subsection.1.1.3}% 
-\contentsline {chapter}{\numberline {2}Zone Functions}{3}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}AddZone}{3}{section.2.1}% 
-\contentsline {subsection}{\numberline {2.1.1}URL}{3}{subsection.2.1.1}% 
-\contentsline {subsection}{\numberline {2.1.2}Input}{3}{subsection.2.1.2}% 
-\contentsline {subsubsection}{Parameters}{4}{subsubsection*.4}% 
-\contentsline {subsection}{\numberline {2.1.3}Output}{4}{subsection.2.1.3}% 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}System Structure}{1}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Back\sphinxhyphen {}end Functions}{2}{section.1.2}% 
+\contentsline {subsection}{\numberline {1.2.1}addTray}{2}{subsection.1.2.1}% 
+\contentsline {subsection}{\numberline {1.2.2}editTray}{2}{subsection.1.2.2}% 
+\contentsline {subsection}{\numberline {1.2.3}removeTray}{2}{subsection.1.2.3}% 
+\contentsline {subsection}{\numberline {1.2.4}switchTray}{2}{subsection.1.2.4}% 
+\contentsline {subsection}{\numberline {1.2.5}addTrayMany}{2}{subsection.1.2.5}% 
+\contentsline {subsection}{\numberline {1.2.6}editTrayMany}{2}{subsection.1.2.6}% 
+\contentsline {subsection}{\numberline {1.2.7}removeTrayMany}{2}{subsection.1.2.7}% 
+\contentsline {subsection}{\numberline {1.2.8}getAllCategory}{3}{subsection.1.2.8}% 
+\contentsline {subsection}{\numberline {1.2.9}getNextNExpiring}{3}{subsection.1.2.9}% 
+\contentsline {subsection}{\numberline {1.2.10}getZones}{3}{subsection.1.2.10}% 
+\contentsline {subsection}{\numberline {1.2.11}addZone}{3}{subsection.1.2.11}% 
+\contentsline {subsection}{\numberline {1.2.12}editZone}{3}{subsection.1.2.12}% 
+\contentsline {subsection}{\numberline {1.2.13}removeZone}{3}{subsection.1.2.13}% 
+\contentsline {subsection}{\numberline {1.2.14}addBay}{3}{subsection.1.2.14}% 
+\contentsline {subsection}{\numberline {1.2.15}editBay}{3}{subsection.1.2.15}% 
+\contentsline {subsection}{\numberline {1.2.16}removeBay}{4}{subsection.1.2.16}% 
+\contentsline {subsection}{\numberline {1.2.17}getTraysInBay}{4}{subsection.1.2.17}% 
+\contentsline {subsection}{\numberline {1.2.18}getBaysInZone}{4}{subsection.1.2.18}% 
+\contentsline {subsection}{\numberline {1.2.19}moveTray}{4}{subsection.1.2.19}% 
+\contentsline {subsection}{\numberline {1.2.20}mongoUpdate}{4}{subsection.1.2.20}% 
+\contentsline {chapter}{\numberline {2}Installation}{5}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Authentication}{5}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Backend}{6}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Database}{6}{section.2.3}% 
+\contentsline {subsection}{\numberline {2.3.1}Deployment}{6}{subsection.2.3.1}% 
+\contentsline {section}{\numberline {2.4}Frontend}{7}{section.2.4}% 
+\contentsline {subsection}{\numberline {2.4.1}Git Repository}{7}{subsection.2.4.1}% 
+\contentsline {subsection}{\numberline {2.4.2}Command line}{7}{subsection.2.4.2}% 
