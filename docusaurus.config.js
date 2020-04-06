@@ -20,7 +20,7 @@ module.exports = {
       },
       links: [
         {to: 'docs/gettingstarted', label: 'Docs', position: 'left'},
-        {href: './admin', label: 'Admin', position: 'right'},
+        {href: 'https://se-docs.netlify.com/admin', label: 'Admin', position: 'right'},
         {
           href: 'https://github.com/samrobbins85/se-docs',
           label: 'GitHub',
