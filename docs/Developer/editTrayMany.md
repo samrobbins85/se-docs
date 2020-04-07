@@ -2,7 +2,7 @@
 id: editTrayMany
 title: editTrayMany
 ---
-Add many trays in a single request 
+Edit many trays in a single request.
 ## URL
 ```http request
 POST /stockTake/editTrayMany
