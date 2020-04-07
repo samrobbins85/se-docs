@@ -2,7 +2,7 @@
 title: addTray
 id: addTray
 ---
-Adds a new tray to the warehouse
+Adds a new tray to the warehouse.
 
 ## URL
 
