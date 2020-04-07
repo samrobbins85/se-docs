@@ -3,7 +3,7 @@ id: removeBay
 title: removeBay
 ---
 
-Removes a bay from the warehouse.
+Removes a bay (and all trays within) from the warehouse.
 ## URL
 ```http request
 POST /stockTake/removeBay
