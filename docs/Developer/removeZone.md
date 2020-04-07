@@ -3,7 +3,7 @@ id: removeZone
 title: removeZone
 ---
 
-Removes a zone from the warehouse
+Removes a zone (and all bays and trays contained within) from the warehouse.
 ## URL
 ```http request
 POST /stockTake/removeZone
