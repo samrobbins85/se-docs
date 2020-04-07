@@ -17,9 +17,7 @@ POST /stockTake/editTray
   "tray": "Tray specified",
   "contents": "[Optional] What is in the tray",
   "weight": "[Optional] How much does it weigh",
-  "expiry": "[Optional] When does it expire",
-  "xPos": "[Optional] Change the x position of each tray in the bay, i.e. leftmost tray has xPos = 0",
-  "yPos": "[Optional] Change the y position of each tray in the bay, i.e. topmost tray has yPos = 0"
+  "expiry": "[Optional] When does it expire"
 }
 ```
 
@@ -32,8 +30,6 @@ POST /stockTake/editTray
 | `contents` |   `string`    |  [Optional] What is in the tray |
 | `weight` |   `integer`    |  [Optional] The weight of the contents (give as a number in Kilos)|
 | `expiry` |   `string`    |  [Optional] The expiry date of the food |
-| `xPos` |   `integer`    |  [Optional] The horizontal positional element of the tray within its bay |
-| `yPos` |   `integer`    |  [Optional] The vertical positional element of the tray within its bay |
 
 
 ## Output
