@@ -3,7 +3,7 @@ id: removeTray
 title: removeTray
 ---
 
-Removes a tray from the warehouse
+Removes a tray from the warehouse.
 ## URL
 ```http request
 POST /stockTake/removeTray
