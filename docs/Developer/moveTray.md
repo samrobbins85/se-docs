@@ -3,7 +3,7 @@ id: moveTray
 title: moveTray
 ---
 
-Switches the position of two trays
+Moves a tray to a specified empty tray position.
 ## URL
 ```http request
 POST /stockTake/moveTray
