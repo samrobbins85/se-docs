@@ -15,11 +15,11 @@ POST /stockTake/editTray
   "zone": "Zone specified",
   "bay": "Bay specified",
   "tray": "Tray specified",
-  "contents": "[optional] What is in the tray",
-  "weight": "[optional] How much does it weigh",
-  "expiry": "[optional] When does it expire",
-  "xPos": "[optional] Change the x position of each tray in the bay, i.e. leftmost tray has xPos = 0",
-  "yPos": "[optional] Change the y position of each tray in the bay, i.e. topmost tray has yPos = 0"
+  "contents": "[Optional] What is in the tray",
+  "weight": "[Optional] How much does it weigh",
+  "expiry": "[Optional] When does it expire",
+  "xPos": "[Optional] Change the x position of each tray in the bay, i.e. leftmost tray has xPos = 0",
+  "yPos": "[Optional] Change the y position of each tray in the bay, i.e. topmost tray has yPos = 0"
 }
 ```
 
