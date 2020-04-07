@@ -3,7 +3,7 @@ id: addZone
 title: addZone
 ---
 
-Adds a new zone to the warehouse
+Adds a new zone to the warehouse.
 ## URL
 ```http request
 POST /stockTake/addZone
@@ -12,9 +12,9 @@ POST /stockTake/addZone
 ## Input
 ```json
 {
-  "zone": "Zone name",
-  "height": 1,
-  "width": 1
+  "zone": "Name of the zone to be added",
+  "height": "Height of the zone",
+  "width": "Width of the zone"
 }
 ```
 
