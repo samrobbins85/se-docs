@@ -2,7 +2,7 @@
 id: editTray
 title: editTray
 ---
-Edits the contents of a tray  
+Edits the contents of a tray.
 The only required fields are the zone, bay and tray name; as well as any fields that are being edited.
 ## URL
 ```http request
