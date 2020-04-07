@@ -2,7 +2,7 @@
 id: removeTrayMany 
 title: removeTrayMany
 ---
-Add many trays in a single request 
+Removes many trays in a single request.
 ## URL
 ```http request
 POST /stockTake/removeTrayMany
