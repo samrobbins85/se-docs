@@ -3,7 +3,7 @@ id: switchTray
 title: switchTray
 ---
 
-Switches the position of two trays
+Switches the location of two trays.
 ## URL
 ```http request
 POST /stockTake/switchTray
