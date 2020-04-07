@@ -3,7 +3,7 @@ id: getTraysInBay
 title: getTraysInBay
 ---
 
-Gets the trays in a given Bay
+Gets all of the trays in a specified bay.
 ## URL
 ```http request
 POST /stockTake/getTraysInBay
@@ -24,4 +24,4 @@ POST /stockTake/getTraysInBay
 | `bay`      |   `string`    |  The bay you want info about|
 
 ## Output
-An array of the trays in the bay
+An array of the trays in the bay.
