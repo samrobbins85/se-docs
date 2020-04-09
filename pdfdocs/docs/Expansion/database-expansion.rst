@@ -14,6 +14,7 @@ When you open the program you will be greeted with this input:
 
 .. image:: images/mongodb/connect.png
   :width: 500
+  :align: center
 
 We will include this URL in the handover package, it can also be found
 in the ``routes/stocktake.js`` file of the backend assigned as ``URL``.
@@ -23,6 +24,7 @@ below is a screenshot of what this looks like for the default setup.
 
 .. image:: images/mongodb/databases.png
   :width: 500
+  :align: center
   
 If you want to add more features to the database you can use
 ``CREATE DATABASE`` to add a new database for storing more information.

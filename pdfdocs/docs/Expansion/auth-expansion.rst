@@ -17,6 +17,7 @@ to the following screen
 
 .. image:: images/auth0/add_users.png
   :width: 500
+  :align: center
 
 Adding a user can be done by clicking the ``CREATE USER`` button, and
 removing a user can be done by clicking the three dots next to a given

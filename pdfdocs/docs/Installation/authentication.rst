@@ -16,6 +16,7 @@ simple:
 
 .. image:: images/auth0/auth0.png
   :width: 500
+  :align: center
 
 4. Paste this value under ``clientID`` in ``auth_config.json``, which is
    located in the ``src`` folder of the ``frontend`` server
