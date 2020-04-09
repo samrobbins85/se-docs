@@ -251,7 +251,11 @@ latex_elements = {
 
      # Additional stuff for the LaTeX preamble.
      #
-     # 'preamble': '',
+     'preamble': r'''
+\let\oldsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\oldsubsection}
+\setcounter{tocdepth}{2}                  
+         ''',
 
      # Latex figure (float) alignment
      #

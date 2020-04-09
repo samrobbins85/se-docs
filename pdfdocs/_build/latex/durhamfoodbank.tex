@@ -70,6 +70,10 @@
 \setcounter{tocdepth}{1}
 
 
+\let\oldsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\oldsubsection}
+\setcounter{tocdepth}{2}                  
+         
 
 \title{Durham Foodbank}
 \date{Apr 09, 2020}
@@ -875,6 +879,1224 @@ the same way as adding a database.
 By clicking on a collection, you can see the stored data, this is useful
 for testing purposes as it allows you to immediately see the changes
 made to the data.
+
+
+\chapter{Developer}
+\label{\detokenize{index:developer}}
+
+\section{Tray functions}
+\label{\detokenize{docs/Developer/index:tray-functions}}\label{\detokenize{docs/Developer/index::doc}}
+
+\subsection{addTray}
+\label{\detokenize{docs/Developer/addTray:addtray}}\label{\detokenize{docs/Developer/addTray::doc}}
+Adds a new tray to the warehouse.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/addTray:url}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+POST /stockTake/addTray
+\end{sphinxVerbatim}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/addTray:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Zone specified\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}bay\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Bay specified\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}tray\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Tray specified\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}contents\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}What is in the tray\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}weight\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}How much does it weigh\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}expiry\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}When does it expire\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}xPos\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}The x position of each tray in the bay, i.e. leftmost tray has xPos = 0\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}yPos\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}The y position of each tray in the bay, i.e. topmost tray has yPos = 0\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/addTray:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{zone}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The zone in which the tray is
+\\
+\hline
+\sphinxcode{\sphinxupquote{bay}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The bay in which the tray is
+\\
+\hline
+\sphinxcode{\sphinxupquote{tray}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The tray to edit
+\\
+\hline
+\sphinxcode{\sphinxupquote{contents}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+What is in the tray
+\\
+\hline
+\sphinxcode{\sphinxupquote{weight}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+The weight of the contents (give as a number in Kilos)
+\\
+\hline
+\sphinxcode{\sphinxupquote{expiry}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The expiry date of the food
+\\
+\hline
+\sphinxcode{\sphinxupquote{xPos}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+The horizontal positional element of the tray within its bay
+\\
+\hline
+\sphinxcode{\sphinxupquote{yPos}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+The vertical positional element of the tray within its bay
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/addTray:output}}
+\sphinxcode{\sphinxupquote{OK}} if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{removeTray}
+\label{\detokenize{docs/Developer/removeTray:removetray}}\label{\detokenize{docs/Developer/removeTray::doc}}
+Removes a tray from the warehouse.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/removeTray:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/removeTray}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/removeTray:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Zone the tray is in\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}bay\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Bay the tray is in\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}tray\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}The tray to remove\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/removeTray:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{zone}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The zone the tray you want to remove is in
+\\
+\hline
+\sphinxcode{\sphinxupquote{bay}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The bay the tray you want to remove is in
+\\
+\hline
+\sphinxcode{\sphinxupquote{tray}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The tray you want to remove
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/removeTray:output}}
+\sphinxcode{\sphinxupquote{OK}} if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{switchTray}
+\label{\detokenize{docs/Developer/switchTray:switchtray}}\label{\detokenize{docs/Developer/switchTray::doc}}
+Switches the location of two trays.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/switchTray:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/switchTray}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/switchTray:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}first\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+    \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Zone ID\PYGZdq{}}\PYG{p}{,}
+    \PYG{n+nt}{\PYGZdq{}bay\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Bay ID\PYGZdq{}}\PYG{p}{,}
+    \PYG{n+nt}{\PYGZdq{}tray\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Tray ID\PYGZdq{}}
+  \PYG{p}{\PYGZcb{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}second\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+    \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Zone ID\PYGZdq{}}\PYG{p}{,}
+    \PYG{n+nt}{\PYGZdq{}bay\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Bay ID\PYGZdq{}}\PYG{p}{,}
+    \PYG{n+nt}{\PYGZdq{}tray\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Tray ID\PYGZdq{}}
+  \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/switchTray:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{first}}
+&
+\sphinxcode{\sphinxupquote{JSON Object}}
+&
+The position of the first tray to swap
+\\
+\hline
+\sphinxcode{\sphinxupquote{second}}
+&
+\sphinxcode{\sphinxupquote{JSON Object}}
+&
+The position of the second tray to swap
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/switchTray:output}}
+\sphinxcode{\sphinxupquote{OK}} if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{editTray}
+\label{\detokenize{docs/Developer/editTray:edittray}}\label{\detokenize{docs/Developer/editTray::doc}}
+Edits the contents of a tray. The only required fields are the zone, bay
+and tray name; as well as any fields that are being edited.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/editTray:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/editTray}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/editTray:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Zone specified\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}bay\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Bay specified\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}tray\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Tray specified\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}contents\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}[Optional] What is in the tray\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}weight\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}[Optional] How much does it weigh\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}expiry\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}[Optional] When does it expire\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/editTray:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{zone}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The zone in
+which the
+tray is
+\\
+\hline
+\sphinxcode{\sphinxupquote{bay}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The bay in
+which the
+tray is
+\\
+\hline
+\sphinxcode{\sphinxupquote{tray}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The tray to
+edit
+\\
+\hline
+\sphinxcode{\sphinxupquote{contents}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+{[}Optional{]}
+What is in
+the tray
+\\
+\hline
+\sphinxcode{\sphinxupquote{weight}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+{[}Optional{]}
+The weight
+of the
+contents
+(give as a
+number in
+Kilos)
+\\
+\hline
+\sphinxcode{\sphinxupquote{expiry}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+{[}Optional{]}
+The expiry
+date of the
+food
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/editTray:output}}
+\sphinxcode{\sphinxupquote{OK}} if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{moveTray}
+\label{\detokenize{docs/Developer/moveTray:movetray}}\label{\detokenize{docs/Developer/moveTray::doc}}
+Moves a tray to a specified empty tray position.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/moveTray:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/moveTray}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/moveTray:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}posStart\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+    \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Zone ID\PYGZdq{}}\PYG{p}{,}
+    \PYG{n+nt}{\PYGZdq{}bay\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Bay ID\PYGZdq{}}\PYG{p}{,}
+    \PYG{n+nt}{\PYGZdq{}tray\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Tray ID\PYGZdq{}}
+  \PYG{p}{\PYGZcb{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}posTarget\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+    \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Zone ID\PYGZdq{}}\PYG{p}{,}
+    \PYG{n+nt}{\PYGZdq{}bay\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Bay ID\PYGZdq{}}\PYG{p}{,}
+    \PYG{n+nt}{\PYGZdq{}tray\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Tray ID\PYGZdq{}}
+  \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/moveTray:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{posStart}}
+&
+\sphinxcode{\sphinxupquote{JSON Object}}
+&
+Starting (current) position of the tray to move.
+\\
+\hline
+\sphinxcode{\sphinxupquote{posTarget}}
+&
+\sphinxcode{\sphinxupquote{JSON Object}}
+&
+New position of the tray after it moves.
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/moveTray:output}}
+\sphinxcode{\sphinxupquote{OK}} if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{nextExpiring}
+\label{\detokenize{docs/Developer/nextExpiring:nextexpiring}}\label{\detokenize{docs/Developer/nextExpiring::doc}}
+Get the next n expiring trays in the warehouse
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/nextExpiring:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/nextExpiring}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/nextExpiring:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+    \PYG{n+nt}{\PYGZdq{}n\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Top n trays to fetch\PYGZdq{}}\PYG{p}{,}
+    \PYG{n+nt}{\PYGZdq{}contents\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}[Optional] Get trays that match these contents\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/nextExpiring:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{n}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+Number of trays to
+fetch
+\\
+\hline
+\sphinxcode{\sphinxupquote{contents}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+{[}Optional{]} String
+matching the contents
+of some tray in the
+warehouse
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/nextExpiring:output}}
+Array of JSON Tray Objects if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{getAllCategory}
+\label{\detokenize{docs/Developer/getAllCategory:getallcategory}}\label{\detokenize{docs/Developer/getAllCategory::doc}}
+Get all trays that contain the specified item
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/getAllCategory:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/getAllCategory}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/getAllCategory:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+    \PYG{n+nt}{\PYGZdq{}contents\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Optional, only get trays that match these contents\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/getAllCategory:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{contents}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+String matching the contents of some tray in the warehouse
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/getAllCategory:output}}
+Array of JSON Tray Objects if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{addTrayMany}
+\label{\detokenize{docs/Developer/addTrayMany:addtraymany}}\label{\detokenize{docs/Developer/addTrayMany::doc}}
+Add many trays in a single request.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/addTrayMany:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/addTrayMany}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/addTrayMany:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{Array} \PYG{n}{of} \PYG{n}{tray} \PYG{n}{objects} \PYG{k}{as} \PYG{n}{described} \PYG{o+ow}{in} \PYG{n}{addTray}
+\end{sphinxVerbatim}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/addTrayMany:output}}
+\sphinxcode{\sphinxupquote{SUCCESS}} if all trays added successfully
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{editTrayMany}
+\label{\detokenize{docs/Developer/editTrayMany:edittraymany}}\label{\detokenize{docs/Developer/editTrayMany::doc}}
+Edit many trays in a single request.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/editTrayMany:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/editTrayMany}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/editTrayMany:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{Array} \PYG{n}{of} \PYG{n}{tray} \PYG{n}{objects} \PYG{k}{as} \PYG{n}{described} \PYG{o+ow}{in} \PYG{n}{editTray}
+\end{sphinxVerbatim}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/editTrayMany:output}}
+\sphinxcode{\sphinxupquote{SUCCESS}} if all trays edited successfully
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{removeTrayMany}
+\label{\detokenize{docs/Developer/removeTrayMany:removetraymany}}\label{\detokenize{docs/Developer/removeTrayMany::doc}}
+Removes many trays in a single request.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/removeTrayMany:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/removeTrayMany}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/removeTrayMany:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n}{Array} \PYG{n}{of} \PYG{n}{position} \PYG{n}{objects} \PYG{k}{as} \PYG{n}{described} \PYG{o+ow}{in} \PYG{n}{removeTray}
+\end{sphinxVerbatim}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/removeTrayMany:output}}
+\sphinxcode{\sphinxupquote{SUCCESS}} if all trays removed successfully
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\section{Bay functions}
+\label{\detokenize{docs/Developer/index:bay-functions}}
+
+\subsection{addBay}
+\label{\detokenize{docs/Developer/addBay:addbay}}\label{\detokenize{docs/Developer/addBay::doc}}
+Adds a new bay to the warehouse
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/addBay:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/addBay}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/addBay:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}bay\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Bay Name\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Zone Name\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}xVal\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}x Position of bay in zone\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}yVal\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}y Position of bay in zone\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}xSize\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}x Size of the bay\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}ySize\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}y Size of the bay\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/addBay:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{bay}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+Bay identifier string
+\\
+\hline
+\sphinxcode{\sphinxupquote{zone}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+Zone identifier of zone the bay is in
+\\
+\hline
+\sphinxcode{\sphinxupquote{xVal}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+x Position of the bay within the given zone
+\\
+\hline
+\sphinxcode{\sphinxupquote{yVal}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+y Position of the bay within the given zone
+\\
+\hline
+\sphinxcode{\sphinxupquote{xSize}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+x size of the bay (number of columns for trays)
+\\
+\hline
+\sphinxcode{\sphinxupquote{ySize}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+y size of the bay (number of rows for trays)
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/addBay:output}}
+\sphinxcode{\sphinxupquote{OK}} if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{removeBay}
+\label{\detokenize{docs/Developer/removeBay:removebay}}\label{\detokenize{docs/Developer/removeBay::doc}}
+Removes a bay (and all trays within) from the warehouse.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/removeBay:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/removeBay}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/removeBay:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Zone that the bay is in\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}bay\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}The bay to remove\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/removeBay:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{zone}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+Zone identifier of the zone the bay is in
+\\
+\hline
+\sphinxcode{\sphinxupquote{bay}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+Bay identifier of the bay to remove
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/removeBay:output}}
+\sphinxcode{\sphinxupquote{OK}} if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{editBay}
+\label{\detokenize{docs/Developer/editBay:editbay}}\label{\detokenize{docs/Developer/editBay::doc}}
+Edit the attributes of a bay.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/editBay:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/editBay}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/editBay:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}bay\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Bay Name\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Zone Name\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}xVal\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}[Optional] New x Position of bay in zone\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}yVal\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}[Optional] New y Position of bay in zone\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}xSize\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}[Optional] New x Size of the bay\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}ySize\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}[Optional] New y Size of the bay\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/editBay:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{bay}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+Name of the bay being amended
+\\
+\hline
+\sphinxcode{\sphinxupquote{zone}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+Zone identifier of zone the bay is in
+\\
+\hline
+\sphinxcode{\sphinxupquote{xVal}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+{[}Optional{]} x Position of the bay within the given zone
+\\
+\hline
+\sphinxcode{\sphinxupquote{yVal}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+{[}Optional{]} y Position of the bay within the given zone
+\\
+\hline
+\sphinxcode{\sphinxupquote{xSize}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+{[}Optional{]} x size of the bay (number of columns for trays)
+\\
+\hline
+\sphinxcode{\sphinxupquote{ySize}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+{[}Optional{]} y size of the bay (number of rows for trays)
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/editBay:output}}
+\sphinxcode{\sphinxupquote{OK}} if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{getTraysInBay}
+\label{\detokenize{docs/Developer/getTraysInBay:gettraysinbay}}\label{\detokenize{docs/Developer/getTraysInBay::doc}}
+Gets all of the trays in a specified bay.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/getTraysInBay:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/getTraysInBay}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/getTraysInBay:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Specified zone\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}bay\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Specified bay\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/getTraysInBay:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{zone}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The zone you want info about
+\\
+\hline
+\sphinxcode{\sphinxupquote{bay}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The bay you want info about
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/getTraysInBay:output}}
+An array of the trays in the bay.
+
+
+\section{Zone functions}
+\label{\detokenize{docs/Developer/index:zone-functions}}
+
+\subsection{addZone}
+\label{\detokenize{docs/Developer/addZone:addzone}}\label{\detokenize{docs/Developer/addZone::doc}}
+Adds a new zone to the warehouse.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/addZone:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/addZone}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/addZone:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Name of the zone to be added\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}height\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Height of the zone\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}width\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Width of the zone\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/addZone:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{zone}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The zone you want to add
+\\
+\hline
+\sphinxcode{\sphinxupquote{height}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+The height you want the zone to be
+\\
+\hline
+\sphinxcode{\sphinxupquote{width}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+The width you want the zone to be
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/addZone:output}}
+\sphinxcode{\sphinxupquote{OK}} if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{editZone}
+\label{\detokenize{docs/Developer/editZone:editzone}}\label{\detokenize{docs/Developer/editZone::doc}}
+Edit the target zone’s attributes.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/editZone:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/editZone}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/editZone:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Name of the zone to be altered\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}newname\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}[Optional] New Name of the zone\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}height\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}[Optional] New Height of the zone\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}width\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}[Optional] New Width of the zone\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/editZone:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{zone}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+Target zone identifier
+\\
+\hline
+\sphinxcode{\sphinxupquote{newname}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+{[}Optional{]} The new name of the
+zone
+\\
+\hline
+\sphinxcode{\sphinxupquote{height}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+{[}Optional{]} The new height of
+the zone (number of rows in
+the zone)
+\\
+\hline
+\sphinxcode{\sphinxupquote{width}}
+&
+\sphinxcode{\sphinxupquote{integer}}
+&
+{[}Optional{]} The new width of
+the zone (number of columns in
+the zone)
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/editZone:output}}
+\sphinxcode{\sphinxupquote{OK}} if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{getBaysinZone}
+\label{\detokenize{docs/Developer/getBaysInZone:getbaysinzone}}\label{\detokenize{docs/Developer/getBaysInZone::doc}}
+Gets an array of all the bays in a specified zone
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/getBaysInZone:url}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+POST /stockTake/getZone
+\end{sphinxVerbatim}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/getBaysInZone:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Target zone identifer\PYGZdq{}}\PYG{p}{,}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/getBaysInZone:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{zone}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The name of the zone containing the bays we wish to retrieve
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/getBaysInZone:output}}
+An array of trays is returned if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
+
+
+\subsection{getZones}
+\label{\detokenize{docs/Developer/getZones:getzones}}\label{\detokenize{docs/Developer/getZones::doc}}
+Gets all zones in the database and their bay contents.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/getZones:url}}
+\sphinxcode{\sphinxupquote{http request GET /stockTake/getZones}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/getZones:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+None
+\end{sphinxVerbatim}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/getZones:output}}
+Returns an array of all zone identifiers
+
+
+\subsection{removeZone}
+\label{\detokenize{docs/Developer/removeZone:removezone}}\label{\detokenize{docs/Developer/removeZone::doc}}
+Removes a zone (and all bays and trays contained within) from the
+warehouse.
+
+
+\subsubsection{URL}
+\label{\detokenize{docs/Developer/removeZone:url}}
+\sphinxcode{\sphinxupquote{http request POST /stockTake/removeZone}}
+
+
+\subsubsection{Input}
+\label{\detokenize{docs/Developer/removeZone:input}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+    \PYG{n+nt}{\PYGZdq{}zone\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}The zone to remove\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\paragraph{Parameters}
+\label{\detokenize{docs/Developer/removeZone:parameters}}
+
+\begin{savenotes}\sphinxattablestart
+\centering
+\begin{tabulary}{\linewidth}[t]{|T|T|T|}
+\hline
+\sphinxstyletheadfamily 
+Parameter
+&\sphinxstyletheadfamily 
+Type
+&\sphinxstyletheadfamily 
+Description
+\\
+\hline
+\sphinxcode{\sphinxupquote{zone}}
+&
+\sphinxcode{\sphinxupquote{string}}
+&
+The identifier of the zone you want to remove
+\\
+\hline
+\end{tabulary}
+\par
+\sphinxattableend\end{savenotes}
+
+
+\subsubsection{Output}
+\label{\detokenize{docs/Developer/removeZone:output}}
+\sphinxcode{\sphinxupquote{OK}} if successful
+
+\sphinxcode{\sphinxupquote{FAIL}} if unsuccessful
 
 
 

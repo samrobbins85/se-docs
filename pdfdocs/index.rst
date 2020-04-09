@@ -40,3 +40,12 @@ Expansion
    docs/Expansion/auth-expansion
    docs/Expansion/backups
    docs/Expansion/database-expansion
+   
+Developer
+------------
+
+
+.. toctree::
+   :maxdepth: 3
+
+   docs/Developer/index
