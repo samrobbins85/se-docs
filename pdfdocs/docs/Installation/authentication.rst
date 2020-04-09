@@ -15,7 +15,7 @@ simple:
 3. Copy the client ID from the application, as pictured below
 
 .. image:: images/auth0/auth0.png
-  :width: 300
+  :width: 500
 
 4. Paste this value under ``clientID`` in ``auth_config.json``, which is
    located in the ``src`` folder of the ``frontend`` server

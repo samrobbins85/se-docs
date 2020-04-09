@@ -13,7 +13,7 @@ available `here <https://docs.mongodb.com/compass/master/>`__.
 When you open the program you will be greeted with this input:
 
 .. image:: images/mongodb/connect.png
-  :width: 300
+  :width: 500
 
 We will include this URL in the handover package, it can also be found
 in the ``routes/stocktake.js`` file of the backend assigned as ``URL``.
@@ -22,7 +22,7 @@ Once you have connected, you will see a screen showing the databases,
 below is a screenshot of what this looks like for the default setup.
 
 .. image:: images/mongodb/databases.png
-  :width: 300
+  :width: 500
   
 If you want to add more features to the database you can use
 ``CREATE DATABASE`` to add a new database for storing more information.

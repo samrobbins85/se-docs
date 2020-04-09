@@ -16,7 +16,7 @@ On the sidebar, click on the **Users & Roles** tab, this will take you
 to the following screen
 
 .. image:: images/auth0/add_users.png
-  :width: 300
+  :width: 500
 
 Adding a user can be done by clicking the ``CREATE USER`` button, and
 removing a user can be done by clicking the three dots next to a given

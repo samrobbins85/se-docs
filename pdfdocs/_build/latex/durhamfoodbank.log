@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.16)  9 APR 2020 13:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.1.16)  9 APR 2020 15:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -860,24 +860,24 @@ Chapter 2.
 File: auth0.png Graphic file (type png)
 <use auth0.png>
 Package pdftex.def Info: auth0.png  used on input line 440.
-(pdftex.def)             Requested size: 225.84229pt x 229.7517pt.
+(pdftex.def)             Requested size: 376.40381pt x 382.92783pt.
 [7
 
- <./auth0.png (PNG copy)>]
+]
 Underfull \hbox (badness 10000) in paragraph at lines 453--456
 []\T1/ptm/m/n/10 Disable signups by go-ing to the con-nec-tions tab of the dash
 -board, click-ing on
  []
 
-[8] [9] [10
-
-]
+[8 <./auth0.png (PNG copy)>] [9] [10]
 Chapter 3.
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <9> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 623.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 624.
-[11]
+[11
+
+]
 LaTeX Font Info:    Try loading font information for TS1+pcr on input line 679.
 
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1pcr.fd
@@ -887,20 +887,21 @@ File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 File: add_users.png Graphic file (type png)
 <use add_users.png>
 Package pdftex.def Info: add_users.png  used on input line 783.
-(pdftex.def)             Requested size: 225.84229pt x 98.1585pt.
+(pdftex.def)             Requested size: 376.40381pt x 163.60162pt.
 
 [14 <./add_users.png (PNG copy)>]
 <connect.png, id=445, 578.87555pt x 195.34366pt>
 File: connect.png Graphic file (type png)
 <use connect.png>
 Package pdftex.def Info: connect.png  used on input line 861.
-(pdftex.def)             Requested size: 225.84229pt x 76.21054pt.
-<databases.png, id=446, 1179.93297pt x 271.19139pt>
+(pdftex.def)             Requested size: 376.40381pt x 127.02254pt.
+ [15 <./connect.png (PNG copy)>]
+<databases.png, id=451, 1179.93297pt x 271.19139pt>
 File: databases.png Graphic file (type png)
 <use databases.png>
 Package pdftex.def Info: databases.png  used on input line 869.
-(pdftex.def)             Requested size: 225.84229pt x 51.90346pt.
- [15 <./connect.png (PNG copy)>] [16 <./databases.png (PNG copy)>]
+(pdftex.def)             Requested size: 376.40381pt x 86.5099pt.
+ [16 <./databases.png (PNG copy)>]
 Chapter 4.
 [17
 
@@ -920,7 +921,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2105.
 Here is how much of TeX's memory you used:
  13907 strings out of 492671
  199147 string characters out of 6134270
- 326341 words of memory out of 5000000
+ 326343 words of memory out of 5000000
  17291 multiletter control sequences out of 15000+600000
  58658 words of font info for 83 fonts, out of 8000000 for 9000
  1138 hyphenation exceptions out of 8191
@@ -934,7 +935,7 @@ uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb>
 texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on durhamfoodbank.pdf (34 pages, 293598 bytes).
+Output written on durhamfoodbank.pdf (34 pages, 293688 bytes).
 PDF statistics:
  665 PDF objects out of 1000 (max. 8388607)
  604 compressed objects within 7 object streams
