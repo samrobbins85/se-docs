@@ -72,7 +72,7 @@
 
 
 \title{Durham Foodbank}
-\date{Mar 30, 2020}
+\date{Apr 09, 2020}
 \release{1.0.0}
 \author{Group 12}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -89,34 +89,14 @@
 
 
 
-\chapter{Introduction}
-\label{\detokenize{index:introduction}}
-To get started with this code, first clone the git repository at
-\sphinxurl{https://github.com/samrobbins85/software-engineering-12} using
+\chapter{System Overview}
+\label{\detokenize{index:system-overview}}
 
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{git} \PYG{n}{clone} \PYG{n}{https}\PYG{p}{:}\PYG{o}{/}\PYG{o}{/}\PYG{n}{github}\PYG{o}{.}\PYG{n}{com}\PYG{o}{/}\PYG{n}{samrobbins85}\PYG{o}{/}\PYG{n}{software}\PYG{o}{\PYGZhy{}}\PYG{n}{engineering}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{12.}\PYG{n}{git}
-\end{sphinxVerbatim}
+\section{Backend Overview}
+\label{\detokenize{docs/System_Overview/Backend_overview:backend-overview}}\label{\detokenize{docs/System_Overview/Backend_overview::doc}}
 
-Then move into the directory created
-
-Then run
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{npm} \PYG{n}{install}
-\end{sphinxVerbatim}
-
-And run
-
-\begin{sphinxVerbatim}[commandchars=\\\{\}]
-\PYG{n}{npm} \PYG{n}{start}
-\end{sphinxVerbatim}
-
-to start the server
-
-
-\section{System Structure}
-\label{\detokenize{docs/Introduction/Backend_overview:system-structure}}\label{\detokenize{docs/Introduction/Backend_overview::doc}}
+\subsection{System Structure}
+\label{\detokenize{docs/System_Overview/Backend_overview:system-structure}}
 The whole system composes of three primary components: the MongoDB
 Database, the Express Server (which I will also refer to as the back\sphinxhyphen{}end
 server) and any number of clients running the front\sphinxhyphen{}end program.
@@ -135,48 +115,48 @@ remains robust and to ensure consistency. Details on how to install and
 deploy the express server are also in the Installation section.
 
 
-\section{Back\sphinxhyphen{}end Functions}
-\label{\detokenize{docs/Introduction/Backend_overview:back-end-functions}}
+\subsection{Back\sphinxhyphen{}end Functions}
+\label{\detokenize{docs/System_Overview/Backend_overview:back-end-functions}}
 In this section I will give a brief overview of all back\sphinxhyphen{}end functions
 in \sphinxcode{\sphinxupquote{routes/stockTake.js}}
 
 
-\subsection{addTray}
-\label{\detokenize{docs/Introduction/Backend_overview:addtray}}
+\subsubsection{addTray}
+\label{\detokenize{docs/System_Overview/Backend_overview:addtray}}
 When provided with a tray object and a MongoDB database object, this
 function will add the contents of the tray object to the database.
 
 
-\subsection{editTray}
-\label{\detokenize{docs/Introduction/Backend_overview:edittray}}
+\subsubsection{editTray}
+\label{\detokenize{docs/System_Overview/Backend_overview:edittray}}
 When provided with a tray object and a MongoDB database object, this
 function will update the contents of an existing tray object in the
 database, provided it exists.
 
 
-\subsection{removeTray}
-\label{\detokenize{docs/Introduction/Backend_overview:removetray}}
+\subsubsection{removeTray}
+\label{\detokenize{docs/System_Overview/Backend_overview:removetray}}
 When provided with the location of a tray object and a MongoDB database
 object, this function will delete the tray from the database.
 
 
-\subsection{switchTray}
-\label{\detokenize{docs/Introduction/Backend_overview:switchtray}}
+\subsubsection{switchTray}
+\label{\detokenize{docs/System_Overview/Backend_overview:switchtray}}
 When provided with the location of two different tray objects and a
 MongoDB database object, this function with swap the positions of two
 trays in the database.
 
 
-\subsection{addTrayMany}
-\label{\detokenize{docs/Introduction/Backend_overview:addtraymany}}
+\subsubsection{addTrayMany}
+\label{\detokenize{docs/System_Overview/Backend_overview:addtraymany}}
 When provided with an array of tray objects and a MongoDB database
 object, this function will add all the tray objects to the database in a
 single command. This should be used if many trays are added at once, as
 adding them one\sphinxhyphen{}by\sphinxhyphen{}one will take an unacceptable amount of time.
 
 
-\subsection{editTrayMany}
-\label{\detokenize{docs/Introduction/Backend_overview:edittraymany}}
+\subsubsection{editTrayMany}
+\label{\detokenize{docs/System_Overview/Backend_overview:edittraymany}}
 When provided with an array of tray objects and a MongoDB database
 object, this function will edit all the tray objects that are in the
 database in a single command. This should be used if many trays are
@@ -184,23 +164,23 @@ edited at once, as editing them one\sphinxhyphen{}by\sphinxhyphen{}one will take
 amount of time.
 
 
-\subsection{removeTrayMany}
-\label{\detokenize{docs/Introduction/Backend_overview:removetraymany}}
+\subsubsection{removeTrayMany}
+\label{\detokenize{docs/System_Overview/Backend_overview:removetraymany}}
 When provided with an array of tray locations and a MongoDB database
 object, this function will remove all the trays at the positions
 specified. This should be used if many trays are deleted at once, as
 deleting them one\sphinxhyphen{}by\sphinxhyphen{}one will take an unacceptable amount of time.
 
 
-\subsection{getAllCategory}
-\label{\detokenize{docs/Introduction/Backend_overview:getallcategory}}
+\subsubsection{getAllCategory}
+\label{\detokenize{docs/System_Overview/Backend_overview:getallcategory}}
 When provided with a category and a MongoDB database object, this
 function will return all trays with a matching category. This can be
 used to quickly obtain the locations of items of a specific type.
 
 
-\subsection{getNextNExpiring}
-\label{\detokenize{docs/Introduction/Backend_overview:getnextnexpiring}}
+\subsubsection{getNextNExpiring}
+\label{\detokenize{docs/System_Overview/Backend_overview:getnextnexpiring}}
 When provided with a number N, an optional category argument and a
 MongoDB database object, this function will return the next N expiring
 trays. If a category is specified, it will return the next N expiring in
@@ -209,79 +189,223 @@ closest to expiring so that we can focus on taking them from the
 warehouse first.
 
 
-\subsection{getZones}
-\label{\detokenize{docs/Introduction/Backend_overview:getzones}}
+\subsubsection{getZones}
+\label{\detokenize{docs/System_Overview/Backend_overview:getzones}}
 This function, when provided with a MongoDB database object, simply
 returns all zones in the warehouse.
 
 
-\subsection{addZone}
-\label{\detokenize{docs/Introduction/Backend_overview:addzone}}
+\subsubsection{addZone}
+\label{\detokenize{docs/System_Overview/Backend_overview:addzone}}
 When provided with a zone object and a MongoDB database object, the zone
 will be added to the database. This can be used in the initial creation
 of the warehouse and to add zones temporarily when there is a need to
 meet a higher than normal capacity.
 
 
-\subsection{editZone}
-\label{\detokenize{docs/Introduction/Backend_overview:editzone}}
+\subsubsection{editZone}
+\label{\detokenize{docs/System_Overview/Backend_overview:editzone}}
 When provided with a zone object and a MongoDB database object, the zone
 in the database will be edited, provided that it does exist.
 
 
-\subsection{removeZone}
-\label{\detokenize{docs/Introduction/Backend_overview:removezone}}
+\subsubsection{removeZone}
+\label{\detokenize{docs/System_Overview/Backend_overview:removezone}}
 When provided with a zone location and a MongoDB database object, the
 zone will be removed from the database.
 
 
-\subsection{addBay}
-\label{\detokenize{docs/Introduction/Backend_overview:addbay}}
+\subsubsection{addBay}
+\label{\detokenize{docs/System_Overview/Backend_overview:addbay}}
 When provided with a bay object and a MongoDB database object, the bay
 will be added to the database.
 
 
-\subsection{editBay}
-\label{\detokenize{docs/Introduction/Backend_overview:editbay}}
+\subsubsection{editBay}
+\label{\detokenize{docs/System_Overview/Backend_overview:editbay}}
 When provided with a bay object and a MongoDB database object, the bay
 will be edited, provided it does exist.
 
 
-\subsection{removeBay}
-\label{\detokenize{docs/Introduction/Backend_overview:removebay}}
+\subsubsection{removeBay}
+\label{\detokenize{docs/System_Overview/Backend_overview:removebay}}
 When provided with the location of the bay and a MongoDB database
 object, the bay will be removed from the database.
 
 
-\subsection{getTraysInBay}
-\label{\detokenize{docs/Introduction/Backend_overview:gettraysinbay}}
+\subsubsection{getTraysInBay}
+\label{\detokenize{docs/System_Overview/Backend_overview:gettraysinbay}}
 When provided with the location of a bay and a MongoDB database object,
 the function will return a list of all tray objects inside that bay,
 provided the bay exists. This will be used to display bay contents in
 the front\sphinxhyphen{}end application.
 
 
-\subsection{getBaysInZone}
-\label{\detokenize{docs/Introduction/Backend_overview:getbaysinzone}}
+\subsubsection{getBaysInZone}
+\label{\detokenize{docs/System_Overview/Backend_overview:getbaysinzone}}
 When provided with the location of a zone and a MongoDB database object,
 the function will return a list of all the bay objects inside that zone,
 provided the zone exists.
 
 
-\subsection{moveTray}
-\label{\detokenize{docs/Introduction/Backend_overview:movetray}}
+\subsubsection{moveTray}
+\label{\detokenize{docs/System_Overview/Backend_overview:movetray}}
 When provided with two tray locations and a MongoDB database object, the
 function will move the tray from one location to another provided a tray
 exists in the start location and does not exist in the end position.
 
 
-\subsection{mongoUpdate}
-\label{\detokenize{docs/Introduction/Backend_overview:mongoupdate}}
+\subsubsection{mongoUpdate}
+\label{\detokenize{docs/System_Overview/Backend_overview:mongoupdate}}
 This function takes a request body and a method code. It will first
 connect to the MongoDB database to get the database object. Then, using
 the method code, it will pass the request body to one of the functions
 described above. It is then responsible for handling errors that occur
 and returning the result to the front\sphinxhyphen{}end.
+
+
+\section{Frontend Overview}
+\label{\detokenize{docs/System_Overview/Frontend_overview:frontend-overview}}\label{\detokenize{docs/System_Overview/Frontend_overview::doc}}
+
+\subsection{Intro}
+\label{\detokenize{docs/System_Overview/Frontend_overview:intro}}
+The front end is built with \sphinxhref{https://reactjs.org/}{ReactJS} an object
+orientated system aimed at building great user interfaces.
+\begin{itemize}
+\item {} 
+It has a unique structure where in each item seen on the ui is effectively a
+react class component.
+
+\item {} 
+These components contain subcomponents. some of these have been built buy us, others have been imported from a boot\sphinxhyphen{}strap component library.
+
+\item {} 
+We use two of these, \sphinxhref{https://v2.grommet.io/}{Grommet} and \sphinxhref{https://react-bootstrap.github.io/}{React bootstrap},
+these are primarily used for buttons and styling that have the benefit of improving user
+experience and decreasing development time.
+
+\end{itemize}
+
+The integral components that have been built by us are:
+
+
+\subsection{Designer}
+\label{\detokenize{docs/System_Overview/Frontend_overview:designer}}
+The component is a tool to build the warehouse, add remove, resize zones
+and their respective bays, this is a very simple component visibly,
+however functionally it is integral. This component uses Api Endpoints:
+\begin{itemize}
+\item {} 
+addTray
+
+\item {} 
+removeTray
+
+\item {} 
+addTrayMany
+
+\item {} 
+removeTrayMany
+
+\item {} 
+getZones
+
+\item {} 
+addZone
+
+\item {} 
+editZone
+
+\item {} 
+removeZone
+
+\item {} 
+addBay
+
+\item {} 
+editBay
+
+\item {} 
+removeBay
+
+\item {} 
+getTraysInBay
+
+\item {} 
+getBaysInZone
+
+\end{itemize}
+
+
+\subsection{Reports}
+\label{\detokenize{docs/System_Overview/Frontend_overview:reports}}
+This component takes and manipulates the data received from the api, the
+component interfaces with the server. This component uses Api Endpoints:
+\begin{itemize}
+\item {} 
+getNextNExpiring
+
+\item {} 
+getAllCategory
+
+\item {} 
+getZones
+
+\item {} 
+getTraysInBay
+
+\item {} 
+getReports
+
+\item {} 
+publishReport
+
+\end{itemize}
+
+
+\subsection{StockTake}
+\label{\detokenize{docs/System_Overview/Frontend_overview:stocktake}}
+This component acts as a data structure, fetching and syncing with the
+server, the sub components below display the data stored in StockTake.
+The component itself not at all complex, however its interactions with
+the sub components and them with each other is quite a lot more complex
+than the sum of the api calls. This component uses Api Endpoints:
+\begin{itemize}
+\item {} 
+editTrayMany
+
+\item {} 
+editBay
+
+\item {} 
+getZones
+
+\item {} 
+getTraysInBay
+
+\item {} 
+getBaysInZone
+
+\end{itemize}
+
+
+\subsubsection{Bayview}
+\label{\detokenize{docs/System_Overview/Frontend_overview:bayview}}
+This component displays a collection of tray items; which represent
+individul trays, it stores a list of the selected trays, and allows the
+manipulation of tray items, by means of category buttons and several
+forms.
+
+
+\subsubsection{CategoryButtons}
+\label{\detokenize{docs/System_Overview/Frontend_overview:categorybuttons}}
+this component displays and handles the change of category.
+
+
+\subsubsection{trayItem}
+\label{\detokenize{docs/System_Overview/Frontend_overview:trayitem}}
+a graphical representation of an individual tray and the event handler
+for when an individual tray is selected.
 
 
 \chapter{Installation}
@@ -341,7 +465,12 @@ followed by \sphinxcode{\sphinxupquote{npm start}}, the server will then be host
 \sphinxstylestrong{3000}
 
 When both the front end have been started, requests can be made between
-them \#\# Deployment Our recommendation for deploying this is on
+them
+
+
+\subsection{Deployment}
+\label{\detokenize{docs/Installation/backEnd:deployment}}
+Our recommendation for deploying this is on
 \sphinxhref{https://www.heroku.com/}{heroku} as it has a good free tier and has
 suitable pricing plans for expanding if usage increases.
 
@@ -402,8 +531,12 @@ please consult the expansion section of this user guide.
 In our handover there is a folder named \sphinxcode{\sphinxupquote{frontend}}, in this is stored
 the user interface with the program. It is a react app, and can be
 started with the command \sphinxcode{\sphinxupquote{npm install}} followed by \sphinxcode{\sphinxupquote{npm start}}, you
-will then be taken to a browser window with the application loaded. \#\#
-Deployment The code can be deployed using any static hosting, our
+will then be taken to a browser window with the application loaded.
+
+
+\subsection{Deployment}
+\label{\detokenize{docs/Installation/frontEnd:deployment}}
+The code can be deployed using any static hosting, our
 recommendation is \sphinxhref{https://zeit.co/}{ZEIT Now} as they have a very
 generous free tier and it is very easy to get set up. There are two main
 ways of getting set up
@@ -450,6 +583,298 @@ The code can then be deployed with the command \sphinxcode{\sphinxupquote{now}},
 \sphinxhref{https://zeit.co/docs/v2/platform/deployments\#now-cli}{here}
 
 \end{enumerate}
+
+
+\chapter{Expansion}
+\label{\detokenize{index:expansion}}
+
+\section{API Expansion}
+\label{\detokenize{docs/Expansion/api-expansion:api-expansion}}\label{\detokenize{docs/Expansion/api-expansion::doc}}
+Once the handover has been completed, you may wish to add your own API
+endpoints to expand the functionality of the application further. In
+this document I will detail how to do this. This document is aimed
+towards technical users who have some experience with javascript before.
+
+
+\subsection{Writing Back\sphinxhyphen{}end Functions}
+\label{\detokenize{docs/Expansion/api-expansion:writing-back-end-functions}}
+Most of the back\sphinxhyphen{}end functions are written so that they can be tested
+with only a connection to a MongoDB server (No connection to the front
+end required). Connections with the front end and MongoDB server are
+handled by other functions in \sphinxcode{\sphinxupquote{routes/stockTake.js}}, so when writing
+back\sphinxhyphen{}end functions we can assume that we have an existing connection to
+a MongoDB server and that some other function will handle communicating
+the result to the front end.
+
+With this in mind, all the back\sphinxhyphen{}end functions take parameters \sphinxcode{\sphinxupquote{body}}
+and \sphinxcode{\sphinxupquote{dbo}} only, where \sphinxcode{\sphinxupquote{body}} is a JSON object representing the
+request body and \sphinxcode{\sphinxupquote{dbo}} is a MongoDB database object. The parameters of
+\sphinxcode{\sphinxupquote{body}} will depend on the function being implemented. When writing new
+back\sphinxhyphen{}end functions, it is a good idea to emulate this, however it is not
+enforced.
+
+Back\sphinxhyphen{}end functions are typically in the following format:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{async} \PYG{k+kd}{function} \PYG{n+nx}{functionName}\PYG{p}{(}\PYG{n+nx}{body}\PYG{p}{,} \PYG{n+nx}{dbo}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{// Check if the body is well formed}
+    \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n+nx}{checkBody}\PYG{p}{(}\PYG{n+nx}{body}\PYG{p}{)}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{l+s+s2}{\PYGZdq{}FAIL\PYGZdq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k}{try} \PYG{p}{\PYGZob{}}
+        \PYG{c+c1}{// Build a request if the request is more complicated}
+        \PYG{k+kd}{let} \PYG{n+nx}{req} \PYG{o}{=} \PYG{n+nx}{buildRequest}\PYG{p}{(}\PYG{n+nx}{body}\PYG{p}{)}\PYG{p}{;}
+
+        \PYG{c+c1}{// Call one, or many MongoDB functions}
+        \PYG{k+kd}{let} \PYG{n+nx}{res} \PYG{o}{=} \PYG{n+nx}{await} \PYG{n+nx}{dbo}\PYG{p}{.}\PYG{n+nx}{collection}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}food\PYGZdq{}}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{someMongoDBFunction}\PYG{p}{(}\PYG{n+nx}{req}\PYG{p}{)}\PYG{p}{;}
+
+        \PYG{c+c1}{// Handle the response, returning \PYGZdq{}FAIL\PYGZdq{} if necessary}
+        \PYG{n+nx}{handleResponse}\PYG{p}{(}\PYG{n+nx}{res}\PYG{p}{)}\PYG{p}{;}
+
+    \PYG{p}{\PYGZcb{}} \PYG{k}{catch} \PYG{p}{(}\PYG{n+nx}{ex}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{l+s+s2}{\PYGZdq{}FAIL\PYGZdq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{c+c1}{// either return \PYGZdq{}SUCCESS\PYGZdq{} or some data that was requested.}
+    \PYG{k}{return} \PYG{l+s+s2}{\PYGZdq{}SUCCESS\PYGZdq{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+For most cases this rough structure will be sufficient. The function
+must return either “FAIL”, “SUCCESS” or the requested data in order to
+be handled correctly by its calling functions.
+
+
+\subsection{Routing Requests}
+\label{\detokenize{docs/Expansion/api-expansion:routing-requests}}
+Within \sphinxcode{\sphinxupquote{routes/stockTake.js}} there is a function called
+\sphinxcode{\sphinxupquote{mongoUpdate}} that handles the calling of the created back\sphinxhyphen{}end
+functions, as well as the connection to the MongoDB server. It also
+handles the returning of data and error codes to the correct API
+endpoint. In order to use this for your new function, you will need to
+add an entry to the switch statement contained within this file.
+
+This is simple to do, add the following code:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{k}{switch} \PYG{l+s+s2}{\PYGZdq{}functionID\PYGZdq{}}\PYG{o}{:}
+    \PYG{n+nx}{code} \PYG{o}{=} \PYG{n+nx}{await} \PYG{n+nx}{functionName}\PYG{p}{(}\PYG{n+nx}{body}\PYG{p}{,} \PYG{n+nx}{dbo}\PYG{p}{)}\PYG{p}{;}
+    \PYG{k}{break}\PYG{p}{;}
+\end{sphinxVerbatim}
+
+to the switch statement.
+
+The next step is to add a new router endpoint. This differs depending on
+what type of function you have implemented.
+
+
+\subsubsection{Functions that get something with no parameters}
+\label{\detokenize{docs/Expansion/api-expansion:functions-that-get-something-with-no-parameters}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{router}\PYG{p}{.}\PYG{n+nx}{get}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/functionEndpoint\PYGZsq{}}\PYG{p}{,} \PYG{n+nx}{async} \PYG{k+kd}{function} \PYG{p}{(}\PYG{n+nx}{req}\PYG{p}{,} \PYG{n+nx}{res}\PYG{p}{,} \PYG{n+nx}{next}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kd}{let} \PYG{n+nx}{result} \PYG{o}{=} \PYG{n+nx}{await} \PYG{n+nx}{mongoUpdate}\PYG{p}{(}\PYG{n+nx}{req}\PYG{p}{.}\PYG{n+nx}{body}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}functionID\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+    \PYG{n+nx}{res}\PYG{p}{.}\PYG{n+nx}{setHeader}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Content\PYGZhy{}Type\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}application/json\PYGZsq{}}\PYG{p}{)}\PYG{p}{;}
+    \PYG{n+nx}{res}\PYG{p}{.}\PYG{n+nx}{status}\PYG{p}{(}\PYG{l+m+mi}{200}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{send}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}result\PYGZsq{}}\PYG{o}{:} \PYG{n+nx}{result}\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+
+\subsubsection{Functions that get something with parameters}
+\label{\detokenize{docs/Expansion/api-expansion:functions-that-get-something-with-parameters}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{router}\PYG{p}{.}\PYG{n+nx}{post}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/functionEndpoint\PYGZsq{}}\PYG{p}{,} \PYG{n+nx}{async} \PYG{k+kd}{function} \PYG{p}{(}\PYG{n+nx}{req}\PYG{p}{,} \PYG{n+nx}{res}\PYG{p}{,} \PYG{n+nx}{next}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kd}{let} \PYG{n+nx}{result} \PYG{o}{=} \PYG{n+nx}{await} \PYG{n+nx}{mongoUpdate}\PYG{p}{(}\PYG{n+nx}{req}\PYG{p}{.}\PYG{n+nx}{body}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}functionID\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+    \PYG{n+nx}{res}\PYG{p}{.}\PYG{n+nx}{setHeader}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}Content\PYGZhy{}Type\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}application/json\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+    \PYG{n+nx}{res}\PYG{p}{.}\PYG{n+nx}{status}\PYG{p}{(}\PYG{l+m+mi}{200}\PYG{p}{)}\PYG{p}{.}\PYG{n+nx}{send}\PYG{p}{(}\PYG{p}{\PYGZob{}}\PYG{l+s+s1}{\PYGZsq{}result\PYGZsq{}}\PYG{o}{:} \PYG{n+nx}{result}\PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+
+\subsubsection{Functions that make changes and only expect success/failure as result}
+\label{\detokenize{docs/Expansion/api-expansion:functions-that-make-changes-and-only-expect-success-failure-as-result}}
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{router}\PYG{p}{.}\PYG{n+nx}{post}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}/functionEndpoint\PYGZsq{}}\PYG{p}{,} \PYG{n+nx}{async} \PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{req}\PYG{p}{,} \PYG{n+nx}{res}\PYG{p}{,} \PYG{n+nx}{next}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kd}{let} \PYG{n+nx}{code} \PYG{o}{=} \PYG{n+nx}{await} \PYG{n+nx}{mongoUpdate}\PYG{p}{(}\PYG{n+nx}{req}\PYG{p}{.}\PYG{n+nx}{body}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}functionID\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n+nx}{code} \PYG{o}{!==} \PYG{l+s+s2}{\PYGZdq{}SUCCESS\PYGZdq{}}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n+nx}{res}\PYG{p}{.}\PYG{n+nx}{sendStatus}\PYG{p}{(}\PYG{l+m+mi}{400}\PYG{p}{)}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}} \PYG{k}{else} \PYG{p}{\PYGZob{}}
+        \PYG{n+nx}{res}\PYG{p}{.}\PYG{n+nx}{sendStatus}\PYG{p}{(}\PYG{l+m+mi}{200}\PYG{p}{)}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+Your back\sphinxhyphen{}end function should now be able to serve requests from the
+client.
+
+
+\subsection{Making Requests}
+\label{\detokenize{docs/Expansion/api-expansion:making-requests}}
+We now need to add the end\sphinxhyphen{}point we have created to the public API so we
+can access it from the front\sphinxhyphen{}end server. The code for accessing the
+existing endpoints is in \sphinxcode{\sphinxupquote{public/api.js}}. When this is imported by a
+front end program or part of the html of a website the functions can be
+called from there.
+
+API functions are less strictly formatted compared to the back\sphinxhyphen{}end
+functions and can take any number of parameters. They should be written
+in a way that assists the developer when writing code by abstracting the
+awkward nature of hand writing JSON bodies.
+
+Typically, the API functions should follow the following structure:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{n+nx}{async} \PYG{k+kd}{function} \PYG{n+nx}{functionName}\PYG{p}{(}\PYG{n+nx}{arg\PYGZus{}1}\PYG{p}{,} \PYG{n+nx}{arg\PYGZus{}2}\PYG{p}{,} \PYG{p}{...}\PYG{p}{,} \PYG{n+nx}{arg\PYGZus{}n}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kd}{let} \PYG{n+nx}{req} \PYG{o}{=} \PYG{n+nx}{buildBody}\PYG{p}{(}\PYG{n+nx}{arg\PYGZus{}1}\PYG{p}{,} \PYG{n+nx}{arg\PYGZus{}2}\PYG{p}{,} \PYG{p}{...}\PYG{p}{,} \PYG{n+nx}{arg\PYGZus{}n}\PYG{p}{)}\PYG{p}{;}
+    \PYG{k+kd}{let} \PYG{n+nx}{res} \PYG{o}{=} \PYG{n+nx}{await} \PYG{n+nx}{fetch}\PYG{p}{(}\PYG{n+nx}{URL} \PYG{o}{+} \PYG{n+nx}{functionEndpoint}\PYG{p}{,} \PYG{p}{\PYGZob{}}
+        \PYG{n+nx}{method}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}GET or POST\PYGZsq{}}\PYG{p}{,}
+        \PYG{n+nx}{mode}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}cors\PYGZsq{}}\PYG{p}{,}
+        \PYG{n+nx}{headers}\PYG{o}{:} \PYG{p}{\PYGZob{}}
+            \PYG{l+s+s1}{\PYGZsq{}Content\PYGZhy{}Type\PYGZsq{}}\PYG{o}{:} \PYG{l+s+s1}{\PYGZsq{}application/json\PYGZsq{}}
+        \PYG{p}{\PYGZcb{}}\PYG{p}{,}
+        \PYG{n+nx}{body}\PYG{o}{:} \PYG{n+nx}{JSON}\PYG{p}{.}\PYG{n+nx}{stringify}\PYG{p}{(}\PYG{n+nx}{req}\PYG{p}{)}
+    \PYG{p}{\PYGZcb{}}\PYG{p}{)}\PYG{p}{;}
+
+    \PYG{k}{if} \PYG{p}{(}\PYG{n+nx}{res}\PYG{p}{.}\PYG{n+nx}{ok}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{l+s+s2}{\PYGZdq{}OK\PYGZdq{}}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{l+s+s2}{\PYGZdq{}FAIL\PYGZdq{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+
+
+\subsection{Recompiling}
+\label{\detokenize{docs/Expansion/api-expansion:recompiling}}
+Javascript is a scripting language and does not require recompiling
+after changes have been made. However, changes to the back\sphinxhyphen{}end will
+require a restart of the back\sphinxhyphen{}end server before the changes will be
+reflected. Changes will also need to be redeployed to whatever hosting
+service you have chosen to use.
+
+
+\subsection{Additional Information}
+\label{\detokenize{docs/Expansion/api-expansion:additional-information}}
+The above information should allow technical users to make simple
+changes to the back\sphinxhyphen{}end so they can add their own features. For more
+complex changes, you should consult the MongoDB documentation (for
+communication with the MongoDB database) and the express server and node
+documentation (for communication between the front and back end).
+
+
+\section{Authentication Expansion}
+\label{\detokenize{docs/Expansion/auth-expansion:authentication-expansion}}\label{\detokenize{docs/Expansion/auth-expansion::doc}}
+Before expanding the authentication, it should first be installed, this
+can be done by following the guide in the installation section of this
+user manual.
+
+
+\subsection{Adding and removing users}
+\label{\detokenize{docs/Expansion/auth-expansion:adding-and-removing-users}}
+One of the most common functions when expanding will be to add and
+remove users. This can be done from the Auth0 dashboard.
+
+On the sidebar, click on the \sphinxstylestrong{Users \& Roles} tab, this will take you
+to the following screen
+
+\noindent\sphinxincludegraphics[width=300\sphinxpxdimen]{{add_users}.png}
+
+Adding a user can be done by clicking the \sphinxcode{\sphinxupquote{CREATE USER}} button, and
+removing a user can be done by clicking the three dots next to a given
+user.
+
+
+\subsection{Allowing social integration}
+\label{\detokenize{docs/Expansion/auth-expansion:allowing-social-integration}}
+Social integration is a very popular choice, such as signin with Google
+as it means you don’t have to remember passwords.
+
+This can easily be done in Auth0 by clicking on the \sphinxstylestrong{Connections} tab
+followed by the \sphinxstylestrong{Social} tab, then enable the switch of the social
+providers you want.
+
+
+\subsection{Customising the login page}
+\label{\detokenize{docs/Expansion/auth-expansion:customising-the-login-page}}
+This is something that would most likely be done when the company logo
+is updated to ensure brand consistency.
+
+From the dashboard, click on the \sphinxstylestrong{Universal Login} tab, and this will
+allow you to specify a company logo and colours.
+
+
+\section{Backups}
+\label{\detokenize{docs/Expansion/backups:backups}}\label{\detokenize{docs/Expansion/backups::doc}}
+This page will detail how to set up backups for your database if you
+have chosen MongoDB as your database of choice.
+
+
+\subsection{Setup}
+\label{\detokenize{docs/Expansion/backups:setup}}
+It is possible to create backups and restore data using the tools
+provided with MongoDB. However, this requires knowledge of command line
+instructions and will likely be difficult for users without this
+knowledge. You can find more information
+\sphinxhref{https://docs.mongodb.com/manual/tutorial/backup-and-restore-tools/}{here}
+on how to perform backups in this way.
+
+The second way of creating backups is using MongoDB Atlas. However, this
+service is not available on the free tier (M0) and will require a paid
+plan, the pricings of which can be found
+\sphinxhref{https://www.mongodb.com/cloud/atlas/pricing?tck=docs\_atlas}{here}.
+
+If you choose an M2 or M5 cluster, Atlas will create daily snapshots of
+the cluster. They will be taken automatically, starting 24 hours after
+the creation of the cluster. These snapshots can then be viewed in a
+table. From there, you can restore or download your existing snapshots.
+Atlas will retain the last 8 daily snapshots. The full documentation on
+this can be found
+\sphinxhref{https://docs.atlas.mongodb.com/backup/m2-m5-snapshots/\#m2-m5-snapshots}{here}.
+
+If you require custom policies (e.g. weekly backups), then you will need
+an M10 or larger cluster. It is then possible to create different backup
+policies and modify the retention time of these snapshots. Additionally,
+you can take on\sphinxhyphen{}demand snapshots, which occur immediately instead of at
+regular intervals. Full information can be found
+\sphinxhref{https://docs.atlas.mongodb.com/backup/cloud-provider-snapshots/}{here}
+
+Please note that you will incur extra costs for Cloud Provider Snapshots
+if you are using an M10+ tier.
+
+
+\section{Database Expansion}
+\label{\detokenize{docs/Expansion/database-expansion:database-expansion}}\label{\detokenize{docs/Expansion/database-expansion::doc}}
+The database we have chosen is \sphinxhref{https://www.mongodb.com/}{MongoDB}
+some details on the basic setup of this are included in the database
+installation section.
+
+The easiest way to expand the database is using \sphinxhref{https://www.mongodb.com/products/compass}{MongoDB
+Compass} which is available
+for all operating systems. The full documentation for this software is
+available \sphinxhref{https://docs.mongodb.com/compass/master/}{here}.
+
+When you open the program you will be greeted with this input:
+
+\noindent\sphinxincludegraphics[width=300\sphinxpxdimen]{{connect}.png}
+
+We will include this URL in the handover package, it can also be found
+in the \sphinxcode{\sphinxupquote{routes/stocktake.js}} file of the backend assigned as \sphinxcode{\sphinxupquote{URL}}.
+
+Once you have connected, you will see a screen showing the databases,
+below is a screenshot of what this looks like for the default setup.
+
+\noindent\sphinxincludegraphics[width=300\sphinxpxdimen]{{databases}.png}
+
+If you want to add more features to the database you can use
+\sphinxcode{\sphinxupquote{CREATE DATABASE}} to add a new database for storing more information.
+
+In each database there are collections, which store your data, you can
+access the collections in a database by clicking on the name of the
+database. If you want to add more collections, this can be done here in
+the same way as adding a database.
+
+By clicking on a collection, you can see the stored data, this is useful
+for testing purposes as it allows you to immediately see the changes
+made to the data.
 
 
 

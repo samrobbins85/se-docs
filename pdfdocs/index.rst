@@ -8,15 +8,15 @@ Welcome to Flask
 
 
 
-Introduction
+System Overview
 ------------
 
 
 .. toctree::
    :maxdepth: 2
 
-   docs/Introduction/Gettingstarted
-   docs/Introduction/Backend_overview
+   docs/System_Overview/Backend_overview
+   docs/System_Overview/Frontend_overview
 
 Installation
 -------------
@@ -29,4 +29,14 @@ Installation
    docs/Installation/database
    docs/Installation/frontEnd
 
+Expansion
+------------
 
+
+.. toctree::
+   :maxdepth: 2
+
+   docs/Expansion/api-expansion
+   docs/Expansion/auth-expansion
+   docs/Expansion/backups
+   docs/Expansion/database-expansion

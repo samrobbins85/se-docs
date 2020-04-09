@@ -10,7 +10,12 @@ followed by ``npm start``, the server will then be hosted on port
 **3000**
 
 When both the front end have been started, requests can be made between
-them ## Deployment Our recommendation for deploying this is on
+them 
+
+Deployment
+-----------
+
+Our recommendation for deploying this is on
 `heroku <https://www.heroku.com/>`__ as it has a good free tier and has
 suitable pricing plans for expanding if usage increases.
 

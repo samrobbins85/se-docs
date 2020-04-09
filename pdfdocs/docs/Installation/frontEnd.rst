@@ -7,8 +7,13 @@ Frontend
 In our handover there is a folder named ``frontend``, in this is stored
 the user interface with the program. It is a react app, and can be
 started with the command ``npm install`` followed by ``npm start``, you
-will then be taken to a browser window with the application loaded. ##
-Deployment The code can be deployed using any static hosting, our
+will then be taken to a browser window with the application loaded.
+
+
+Deployment
+~~~~~~~~~~~~~~
+
+The code can be deployed using any static hosting, our
 recommendation is `ZEIT Now <https://zeit.co/>`__ as they have a very
 generous free tier and it is very easy to get set up. There are two main
 ways of getting set up
