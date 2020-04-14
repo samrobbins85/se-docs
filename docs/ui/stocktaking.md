@@ -17,7 +17,8 @@ There will be a loading screen, it will only take about half a minute depending 
 ## Navigating the warehouse
 
 1. Start by selecting the zone you are taking stock in.
-<img alt="Select a zone" src={useBaseUrl('img/stocktaking/zoneSelection.gif')} />  
+<img alt="Select a zone" src={useBaseUrl('img/stocktaking/zoneSelection.jpg')} />  
+<img alt="Select a zone" src={useBaseUrl('img/stocktaking/baySelection.jpg')} />  
 2. The default bay will be the one added first when designing the warehouse.
     * You can define your ideal tour through a zone when building your warehouse.
     * This will help you rely on the next and previous buttons, to save time.

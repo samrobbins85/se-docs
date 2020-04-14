@@ -36,7 +36,7 @@ Access by clicking reports in the side bar.
         * Expanding on a bay will show you the full weight of trays in that bay, this can be useful to see if a bay is too heavily laden.
         * Beneath is a list of all the trays that match the search criteria, (their weight, category and expiry).
         
-<img alt="Swap two trays" src={useBaseUrl('img/reports/reportsNavigate.gif')} />  
+<img alt="Expand" src={useBaseUrl('img/reports/reportsNavigate.jpg')} />  
 * Note: you will have to expand on each acordion manually to see the contents. This is meant to create a clean environment to view the data, if this is not suitable you can:
     1. export to CSV,
     2. Open the file in Microsoft Excel, and apply filters to each column and perform a search based on any criteria, sort by any field. A full feature list can be found here: [Help with Microsoft Excel Filters](https://support.office.com/en-gb/article/filter-data-in-a-range-or-table-01832226-31b5-4568-8806-38c37dcc180e)  
@@ -51,4 +51,4 @@ In `Section 3` of figure 1, you can see an ordered list of all the trays in the 
     
 * You can filter the list by a chosen category in drop down menu within `Control Panel 5`.
 
-<img alt="Swap two trays" src={useBaseUrl('img/reports/section3.gif')} />  
+<img alt="section 3" src={useBaseUrl('img/reports/section3.jpg')} />  
