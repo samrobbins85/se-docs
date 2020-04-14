@@ -21,32 +21,32 @@ There are various types of changes and actions that you can perform to the zones
 
 1. A zone can be added by selecting the button on the far right and entering valid data into the dropdowns. Zone names must be unique.
 
-<img alt="Select a zone" src={useBaseUrl('static/img/warehousemanager/01-addZone.jpg')} />  
-<img alt="Enter zone data" src={useBaseUrl('static/img/warehousemanager/02-addZone.jpg')} />  
+<img alt="Select a zone" src={useBaseUrl('img/warehousemanager/01-addZone.png')} />  
+<img alt="Enter zone data" src={useBaseUrl('img/warehousemanager/02-addZone.png')} />  
 
 2. Zone names can be changed by selecting a zone in the dropdown, then clicking the edit zone name. Enter a zone name that is currently not in use.
 
-<img alt="Select a zone" src={useBaseUrl('static/img/warehousemanager/03-editZone.jpg')} />  
-<img alt="Edit zone name" src={useBaseUrl('static/img/warehousemanager/04-editZone.jpg')} />  
+<img alt="Select a zone" src={useBaseUrl('img/warehousemanager/03-editZone.png')} />  
+<img alt="Edit zone name" src={useBaseUrl('img/warehousemanager/04-editZone.png')} />  
 
 3. Zones can be deleted by clicking the delete zone button in its dropdown and then confirming.
     * NOTE: All bays and trays contained inside the zone will also be deleted.
     
-<img alt="Select a zone" src={useBaseUrl('static/img/warehousemanager/05-removeZone.jpg')} />  
-<img alt="Confirm zone deletion" src={useBaseUrl('static/img/warehousemanager/06-removeZone.jpg')} /> 
+<img alt="Select a zone" src={useBaseUrl('img/warehousemanager/05-removeZone.png')} />  
+<img alt="Confirm zone deletion" src={useBaseUrl('img/warehousemanager/06-removeZone.png')} /> 
 
 4. Bays can be added to any zone by clicking on the zone you wish to add the bay to and entering valid data. Bay names must be unique within zones.
 
-<img alt="Select a zone" src={useBaseUrl('static/img/warehousemanager/07-addBay.jpg')} />  
-<img alt="Add bay" src={useBaseUrl('static/img/warehousemanager/08-addBay.jpg')} /> 
+<img alt="Select a zone" src={useBaseUrl('img/warehousemanager/07-addBay.png')} />  
+<img alt="Add bay" src={useBaseUrl('img/warehousemanager/08-addBay.png')} /> 
 
 5. Bay dimensions can be altered by selecting a bay inside a zone then entering new values.
 
-<img alt="Select a bay" src={useBaseUrl('static/img/warehousemanager/09-editBay.jpg')} />  
-<img alt="Edit bay values" src={useBaseUrl('static/img/warehousemanager/10-editBay.jpg')} /> 
+<img alt="Select a bay" src={useBaseUrl('img/warehousemanager/09-editBay.png')} />  
+<img alt="Edit bay values" src={useBaseUrl('img/warehousemanager/10-editBay.png')} /> 
 
 6. Bays can also be deleted - provided that it is not the final bay in a zone.
     * NOTE: All trays contained inside the bay will also be deleted.
     
-<img alt="Select a bay" src={useBaseUrl('static/img/warehousemanager/11-removeBay.jpg')} />  
-<img alt="Confirm bay deletion" src={useBaseUrl('static/img/warehousemanager/12-removeBay.jpg')} />
+<img alt="Select a bay" src={useBaseUrl('img/warehousemanager/11-removeBay.png')} />  
+<img alt="Confirm bay deletion" src={useBaseUrl('img/warehousemanager/12-removeBay.png')} />
