@@ -1,155 +1,182 @@
 \babel@toc {english}{}
-\contentsline {chapter}{\numberline {1}System Overview}{1}{chapter.1}% 
-\contentsline {section}{\numberline {1.1}Backend Overview}{1}{section.1.1}% 
-\contentsline {subsection}{\numberline {1.1.1}System Structure}{1}{subsection.1.1.1}% 
-\contentsline {subsection}{\numberline {1.1.2}Back\sphinxhyphen {}end Functions}{2}{subsection.1.1.2}% 
-\contentsline {subsubsection}{addTray}{2}{subsubsection*.3}% 
-\contentsline {subsubsection}{editTray}{2}{subsubsection*.4}% 
-\contentsline {subsubsection}{removeTray}{2}{subsubsection*.5}% 
-\contentsline {subsubsection}{switchTray}{2}{subsubsection*.6}% 
-\contentsline {subsubsection}{addTrayMany}{2}{subsubsection*.7}% 
-\contentsline {subsubsection}{editTrayMany}{2}{subsubsection*.8}% 
-\contentsline {subsubsection}{removeTrayMany}{2}{subsubsection*.9}% 
-\contentsline {subsubsection}{getAllCategory}{3}{subsubsection*.10}% 
-\contentsline {subsubsection}{getNextNExpiring}{3}{subsubsection*.11}% 
-\contentsline {subsubsection}{getZones}{3}{subsubsection*.12}% 
-\contentsline {subsubsection}{addZone}{3}{subsubsection*.13}% 
-\contentsline {subsubsection}{editZone}{3}{subsubsection*.14}% 
-\contentsline {subsubsection}{removeZone}{3}{subsubsection*.15}% 
-\contentsline {subsubsection}{addBay}{3}{subsubsection*.16}% 
-\contentsline {subsubsection}{editBay}{3}{subsubsection*.17}% 
-\contentsline {subsubsection}{removeBay}{4}{subsubsection*.18}% 
-\contentsline {subsubsection}{getTraysInBay}{4}{subsubsection*.19}% 
-\contentsline {subsubsection}{getBaysInZone}{4}{subsubsection*.20}% 
-\contentsline {subsubsection}{moveTray}{4}{subsubsection*.21}% 
-\contentsline {subsubsection}{mongoUpdate}{4}{subsubsection*.22}% 
-\contentsline {section}{\numberline {1.2}Frontend Overview}{4}{section.1.2}% 
-\contentsline {subsection}{\numberline {1.2.1}Intro}{4}{subsection.1.2.1}% 
-\contentsline {subsection}{\numberline {1.2.2}Designer}{5}{subsection.1.2.2}% 
-\contentsline {subsection}{\numberline {1.2.3}Reports}{5}{subsection.1.2.3}% 
-\contentsline {subsection}{\numberline {1.2.4}StockTake}{5}{subsection.1.2.4}% 
-\contentsline {subsubsection}{Bayview}{6}{subsubsection*.23}% 
-\contentsline {subsubsection}{CategoryButtons}{6}{subsubsection*.24}% 
-\contentsline {subsubsection}{trayItem}{6}{subsubsection*.25}% 
-\contentsline {chapter}{\numberline {2}Installation}{7}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Authentication}{7}{section.2.1}% 
-\contentsline {section}{\numberline {2.2}Backend}{8}{section.2.2}% 
-\contentsline {subsection}{\numberline {2.2.1}Deployment}{9}{subsection.2.2.1}% 
-\contentsline {section}{\numberline {2.3}Database}{9}{section.2.3}% 
-\contentsline {subsection}{\numberline {2.3.1}Deployment}{9}{subsection.2.3.1}% 
-\contentsline {section}{\numberline {2.4}Frontend}{9}{section.2.4}% 
-\contentsline {subsection}{\numberline {2.4.1}Deployment}{9}{subsection.2.4.1}% 
-\contentsline {subsection}{\numberline {2.4.2}Git Repository}{10}{subsection.2.4.2}% 
-\contentsline {subsection}{\numberline {2.4.3}Command line}{10}{subsection.2.4.3}% 
-\contentsline {chapter}{\numberline {3}Expansion}{11}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}API Expansion}{11}{section.3.1}% 
-\contentsline {subsection}{\numberline {3.1.1}Writing Back\sphinxhyphen {}end Functions}{11}{subsection.3.1.1}% 
-\contentsline {subsection}{\numberline {3.1.2}Routing Requests}{12}{subsection.3.1.2}% 
-\contentsline {subsubsection}{Functions that get something with no parameters}{12}{subsubsection*.26}% 
-\contentsline {subsubsection}{Functions that get something with parameters}{12}{subsubsection*.27}% 
-\contentsline {subsubsection}{Functions that make changes and only expect success/failure as result}{13}{subsubsection*.28}% 
-\contentsline {subsection}{\numberline {3.1.3}Making Requests}{13}{subsection.3.1.3}% 
-\contentsline {subsection}{\numberline {3.1.4}Recompiling}{13}{subsection.3.1.4}% 
-\contentsline {subsection}{\numberline {3.1.5}Additional Information}{14}{subsection.3.1.5}% 
-\contentsline {section}{\numberline {3.2}Authentication Expansion}{14}{section.3.2}% 
-\contentsline {subsection}{\numberline {3.2.1}Adding and removing users}{14}{subsection.3.2.1}% 
-\contentsline {subsection}{\numberline {3.2.2}Allowing social integration}{14}{subsection.3.2.2}% 
-\contentsline {subsection}{\numberline {3.2.3}Customising the login page}{15}{subsection.3.2.3}% 
-\contentsline {section}{\numberline {3.3}Backups}{15}{section.3.3}% 
-\contentsline {subsection}{\numberline {3.3.1}Setup}{15}{subsection.3.3.1}% 
-\contentsline {section}{\numberline {3.4}Database Expansion}{15}{section.3.4}% 
-\contentsline {chapter}{\numberline {4}Developer}{17}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}Tray functions}{17}{section.4.1}% 
-\contentsline {subsection}{\numberline {4.1.1}addTray}{17}{subsection.4.1.1}% 
-\contentsline {subsubsection}{URL}{17}{subsubsection*.29}% 
-\contentsline {subsubsection}{Input}{17}{subsubsection*.30}% 
-\contentsline {paragraph}{Parameters}{18}{paragraph*.31}% 
-\contentsline {subsubsection}{Output}{18}{subsubsection*.32}% 
-\contentsline {subsection}{\numberline {4.1.2}removeTray}{18}{subsection.4.1.2}% 
-\contentsline {subsubsection}{URL}{18}{subsubsection*.33}% 
-\contentsline {subsubsection}{Input}{18}{subsubsection*.34}% 
-\contentsline {paragraph}{Parameters}{18}{paragraph*.35}% 
-\contentsline {subsubsection}{Output}{19}{subsubsection*.36}% 
-\contentsline {subsection}{\numberline {4.1.3}switchTray}{19}{subsection.4.1.3}% 
-\contentsline {subsubsection}{URL}{19}{subsubsection*.37}% 
-\contentsline {subsubsection}{Input}{19}{subsubsection*.38}% 
-\contentsline {paragraph}{Parameters}{19}{paragraph*.39}% 
-\contentsline {subsubsection}{Output}{19}{subsubsection*.40}% 
-\contentsline {subsection}{\numberline {4.1.4}editTray}{20}{subsection.4.1.4}% 
-\contentsline {subsubsection}{URL}{20}{subsubsection*.41}% 
-\contentsline {subsubsection}{Input}{20}{subsubsection*.42}% 
-\contentsline {paragraph}{Parameters}{20}{paragraph*.43}% 
-\contentsline {subsubsection}{Output}{20}{subsubsection*.44}% 
-\contentsline {subsection}{\numberline {4.1.5}moveTray}{21}{subsection.4.1.5}% 
-\contentsline {subsubsection}{URL}{21}{subsubsection*.45}% 
-\contentsline {subsubsection}{Input}{21}{subsubsection*.46}% 
-\contentsline {paragraph}{Parameters}{21}{paragraph*.47}% 
-\contentsline {subsubsection}{Output}{21}{subsubsection*.48}% 
-\contentsline {subsection}{\numberline {4.1.6}nextExpiring}{21}{subsection.4.1.6}% 
-\contentsline {subsubsection}{URL}{21}{subsubsection*.49}% 
-\contentsline {subsubsection}{Input}{22}{subsubsection*.50}% 
-\contentsline {paragraph}{Parameters}{22}{paragraph*.51}% 
-\contentsline {subsubsection}{Output}{22}{subsubsection*.52}% 
-\contentsline {subsection}{\numberline {4.1.7}getAllCategory}{22}{subsection.4.1.7}% 
-\contentsline {subsubsection}{URL}{22}{subsubsection*.53}% 
-\contentsline {subsubsection}{Input}{22}{subsubsection*.54}% 
-\contentsline {paragraph}{Parameters}{22}{paragraph*.55}% 
-\contentsline {subsubsection}{Output}{23}{subsubsection*.56}% 
-\contentsline {subsection}{\numberline {4.1.8}addTrayMany}{23}{subsection.4.1.8}% 
-\contentsline {subsubsection}{URL}{23}{subsubsection*.57}% 
-\contentsline {subsubsection}{Input}{23}{subsubsection*.58}% 
-\contentsline {subsubsection}{Output}{23}{subsubsection*.59}% 
-\contentsline {subsection}{\numberline {4.1.9}editTrayMany}{23}{subsection.4.1.9}% 
-\contentsline {subsubsection}{URL}{23}{subsubsection*.60}% 
-\contentsline {subsubsection}{Input}{23}{subsubsection*.61}% 
-\contentsline {subsubsection}{Output}{23}{subsubsection*.62}% 
-\contentsline {subsection}{\numberline {4.1.10}removeTrayMany}{24}{subsection.4.1.10}% 
-\contentsline {subsubsection}{URL}{24}{subsubsection*.63}% 
-\contentsline {subsubsection}{Input}{24}{subsubsection*.64}% 
-\contentsline {subsubsection}{Output}{24}{subsubsection*.65}% 
-\contentsline {section}{\numberline {4.2}Bay functions}{24}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}addBay}{24}{subsection.4.2.1}% 
-\contentsline {subsubsection}{URL}{24}{subsubsection*.66}% 
-\contentsline {subsubsection}{Input}{24}{subsubsection*.67}% 
-\contentsline {paragraph}{Parameters}{25}{paragraph*.68}% 
-\contentsline {subsubsection}{Output}{25}{subsubsection*.69}% 
-\contentsline {subsection}{\numberline {4.2.2}removeBay}{25}{subsection.4.2.2}% 
-\contentsline {subsubsection}{URL}{25}{subsubsection*.70}% 
-\contentsline {subsubsection}{Input}{25}{subsubsection*.71}% 
-\contentsline {paragraph}{Parameters}{25}{paragraph*.72}% 
-\contentsline {subsubsection}{Output}{25}{subsubsection*.73}% 
-\contentsline {subsection}{\numberline {4.2.3}editBay}{26}{subsection.4.2.3}% 
-\contentsline {subsubsection}{URL}{26}{subsubsection*.74}% 
-\contentsline {subsubsection}{Input}{26}{subsubsection*.75}% 
-\contentsline {paragraph}{Parameters}{26}{paragraph*.76}% 
-\contentsline {subsubsection}{Output}{26}{subsubsection*.77}% 
-\contentsline {subsection}{\numberline {4.2.4}getTraysInBay}{27}{subsection.4.2.4}% 
-\contentsline {subsubsection}{URL}{27}{subsubsection*.78}% 
-\contentsline {subsubsection}{Input}{27}{subsubsection*.79}% 
-\contentsline {paragraph}{Parameters}{27}{paragraph*.80}% 
-\contentsline {subsubsection}{Output}{27}{subsubsection*.81}% 
-\contentsline {section}{\numberline {4.3}Zone functions}{27}{section.4.3}% 
-\contentsline {subsection}{\numberline {4.3.1}addZone}{27}{subsection.4.3.1}% 
-\contentsline {subsubsection}{URL}{27}{subsubsection*.82}% 
-\contentsline {subsubsection}{Input}{27}{subsubsection*.83}% 
-\contentsline {paragraph}{Parameters}{28}{paragraph*.84}% 
-\contentsline {subsubsection}{Output}{28}{subsubsection*.85}% 
-\contentsline {subsection}{\numberline {4.3.2}editZone}{28}{subsection.4.3.2}% 
-\contentsline {subsubsection}{URL}{28}{subsubsection*.86}% 
-\contentsline {subsubsection}{Input}{28}{subsubsection*.87}% 
-\contentsline {paragraph}{Parameters}{28}{paragraph*.88}% 
-\contentsline {subsubsection}{Output}{29}{subsubsection*.89}% 
-\contentsline {subsection}{\numberline {4.3.3}getBaysinZone}{29}{subsection.4.3.3}% 
-\contentsline {subsubsection}{URL}{29}{subsubsection*.90}% 
-\contentsline {subsubsection}{Input}{29}{subsubsection*.91}% 
-\contentsline {paragraph}{Parameters}{29}{paragraph*.92}% 
-\contentsline {subsubsection}{Output}{29}{subsubsection*.93}% 
-\contentsline {subsection}{\numberline {4.3.4}getZones}{29}{subsection.4.3.4}% 
-\contentsline {subsubsection}{URL}{29}{subsubsection*.94}% 
-\contentsline {subsubsection}{Input}{30}{subsubsection*.95}% 
-\contentsline {subsubsection}{Output}{30}{subsubsection*.96}% 
-\contentsline {subsection}{\numberline {4.3.5}removeZone}{30}{subsection.4.3.5}% 
-\contentsline {subsubsection}{URL}{30}{subsubsection*.97}% 
-\contentsline {subsubsection}{Input}{30}{subsubsection*.98}% 
-\contentsline {paragraph}{Parameters}{30}{paragraph*.99}% 
-\contentsline {subsubsection}{Output}{30}{subsubsection*.100}% 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Installation}{1}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}User Interface Walkaround}{1}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}System Overview}{1}{section.1.3}% 
+\contentsline {section}{\numberline {1.4}Developer}{2}{section.1.4}% 
+\contentsline {section}{\numberline {1.5}Expansion}{2}{section.1.5}% 
+\contentsline {chapter}{\numberline {2}System Overview}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Backend Overview}{3}{section.2.1}% 
+\contentsline {subsection}{\numberline {2.1.1}System Structure}{3}{subsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.1.2}Back\sphinxhyphen {}end Functions}{4}{subsection.2.1.2}% 
+\contentsline {subsubsection}{addTray}{4}{subsubsection*.3}% 
+\contentsline {subsubsection}{editTray}{4}{subsubsection*.4}% 
+\contentsline {subsubsection}{removeTray}{4}{subsubsection*.5}% 
+\contentsline {subsubsection}{switchTray}{4}{subsubsection*.6}% 
+\contentsline {subsubsection}{addTrayMany}{4}{subsubsection*.7}% 
+\contentsline {subsubsection}{editTrayMany}{4}{subsubsection*.8}% 
+\contentsline {subsubsection}{removeTrayMany}{4}{subsubsection*.9}% 
+\contentsline {subsubsection}{getAllCategory}{5}{subsubsection*.10}% 
+\contentsline {subsubsection}{getNextNExpiring}{5}{subsubsection*.11}% 
+\contentsline {subsubsection}{getZones}{5}{subsubsection*.12}% 
+\contentsline {subsubsection}{addZone}{5}{subsubsection*.13}% 
+\contentsline {subsubsection}{editZone}{5}{subsubsection*.14}% 
+\contentsline {subsubsection}{removeZone}{5}{subsubsection*.15}% 
+\contentsline {subsubsection}{addBay}{5}{subsubsection*.16}% 
+\contentsline {subsubsection}{editBay}{5}{subsubsection*.17}% 
+\contentsline {subsubsection}{removeBay}{6}{subsubsection*.18}% 
+\contentsline {subsubsection}{getTraysInBay}{6}{subsubsection*.19}% 
+\contentsline {subsubsection}{getBaysInZone}{6}{subsubsection*.20}% 
+\contentsline {subsubsection}{moveTray}{6}{subsubsection*.21}% 
+\contentsline {subsubsection}{mongoUpdate}{6}{subsubsection*.22}% 
+\contentsline {section}{\numberline {2.2}Frontend Overview}{6}{section.2.2}% 
+\contentsline {subsection}{\numberline {2.2.1}Intro}{6}{subsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.2.2}Designer}{7}{subsection.2.2.2}% 
+\contentsline {subsection}{\numberline {2.2.3}Reports}{7}{subsection.2.2.3}% 
+\contentsline {subsection}{\numberline {2.2.4}StockTake}{7}{subsection.2.2.4}% 
+\contentsline {subsubsection}{Bayview}{8}{subsubsection*.23}% 
+\contentsline {subsubsection}{CategoryButtons}{8}{subsubsection*.24}% 
+\contentsline {subsubsection}{trayItem}{8}{subsubsection*.25}% 
+\contentsline {chapter}{\numberline {3}Installation}{9}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Authentication}{9}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Backend}{10}{section.3.2}% 
+\contentsline {subsection}{\numberline {3.2.1}Deployment}{11}{subsection.3.2.1}% 
+\contentsline {section}{\numberline {3.3}Database}{11}{section.3.3}% 
+\contentsline {subsection}{\numberline {3.3.1}Deployment}{11}{subsection.3.3.1}% 
+\contentsline {section}{\numberline {3.4}Frontend}{11}{section.3.4}% 
+\contentsline {subsection}{\numberline {3.4.1}Deployment}{11}{subsection.3.4.1}% 
+\contentsline {subsection}{\numberline {3.4.2}Git Repository}{12}{subsection.3.4.2}% 
+\contentsline {subsection}{\numberline {3.4.3}Command line}{12}{subsection.3.4.3}% 
+\contentsline {chapter}{\numberline {4}User Interface Walkaround}{13}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Overview}{13}{section.4.1}% 
+\contentsline {subsection}{\numberline {4.1.1}Login}{13}{subsection.4.1.1}% 
+\contentsline {subsection}{\numberline {4.1.2}Sign in page}{13}{subsection.4.1.2}% 
+\contentsline {subsection}{\numberline {4.1.3}Side Bar}{13}{subsection.4.1.3}% 
+\contentsline {subsection}{\numberline {4.1.4}Signing Out}{14}{subsection.4.1.4}% 
+\contentsline {section}{\numberline {4.2}Reports}{14}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}What you can do}{14}{subsection.4.2.1}% 
+\contentsline {subsubsection}{Overview}{15}{subsubsection*.26}% 
+\contentsline {subsubsection}{Navigating the warehouse}{16}{subsubsection*.27}% 
+\contentsline {subsubsection}{Determine how full the warehouse is}{18}{subsubsection*.28}% 
+\contentsline {subsubsection}{View an ordered list of the next Expiring trays}{18}{subsubsection*.29}% 
+\contentsline {section}{\numberline {4.3}Stock Taking}{18}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Overview}{18}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Navigating the warehouse}{19}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}Selecting trays}{20}{subsection.4.3.3}% 
+\contentsline {subsection}{\numberline {4.3.4}Swapping two trays within a bay}{20}{subsection.4.3.4}% 
+\contentsline {subsection}{\numberline {4.3.5}Modifying contents of selected trays}{20}{subsection.4.3.5}% 
+\contentsline {subsection}{\numberline {4.3.6}Modifying expiry date of selected trays}{20}{subsection.4.3.6}% 
+\contentsline {subsection}{\numberline {4.3.7}Modifying Weight of selected trays}{21}{subsection.4.3.7}% 
+\contentsline {subsection}{\numberline {4.3.8}Undo/Redo}{21}{subsection.4.3.8}% 
+\contentsline {chapter}{\numberline {5}Expansion}{23}{chapter.5}% 
+\contentsline {section}{\numberline {5.1}API Expansion}{23}{section.5.1}% 
+\contentsline {subsection}{\numberline {5.1.1}Writing Back\sphinxhyphen {}end Functions}{23}{subsection.5.1.1}% 
+\contentsline {subsection}{\numberline {5.1.2}Routing Requests}{24}{subsection.5.1.2}% 
+\contentsline {subsubsection}{Functions that get something with no parameters}{24}{subsubsection*.30}% 
+\contentsline {subsubsection}{Functions that get something with parameters}{24}{subsubsection*.31}% 
+\contentsline {subsubsection}{Functions that make changes and only expect success/failure as result}{25}{subsubsection*.32}% 
+\contentsline {subsection}{\numberline {5.1.3}Making Requests}{25}{subsection.5.1.3}% 
+\contentsline {subsection}{\numberline {5.1.4}Recompiling}{25}{subsection.5.1.4}% 
+\contentsline {subsection}{\numberline {5.1.5}Additional Information}{26}{subsection.5.1.5}% 
+\contentsline {section}{\numberline {5.2}Authentication Expansion}{26}{section.5.2}% 
+\contentsline {subsection}{\numberline {5.2.1}Adding and removing users}{26}{subsection.5.2.1}% 
+\contentsline {subsection}{\numberline {5.2.2}Allowing social integration}{26}{subsection.5.2.2}% 
+\contentsline {subsection}{\numberline {5.2.3}Customising the login page}{27}{subsection.5.2.3}% 
+\contentsline {section}{\numberline {5.3}Backups}{27}{section.5.3}% 
+\contentsline {subsection}{\numberline {5.3.1}Setup}{27}{subsection.5.3.1}% 
+\contentsline {section}{\numberline {5.4}Database Expansion}{27}{section.5.4}% 
+\contentsline {chapter}{\numberline {6}Developer}{29}{chapter.6}% 
+\contentsline {section}{\numberline {6.1}Tray functions}{29}{section.6.1}% 
+\contentsline {subsection}{\numberline {6.1.1}addTray}{29}{subsection.6.1.1}% 
+\contentsline {subsubsection}{URL}{29}{subsubsection*.33}% 
+\contentsline {subsubsection}{Input}{29}{subsubsection*.34}% 
+\contentsline {paragraph}{Parameters}{30}{paragraph*.35}% 
+\contentsline {subsubsection}{Output}{30}{subsubsection*.36}% 
+\contentsline {subsection}{\numberline {6.1.2}removeTray}{30}{subsection.6.1.2}% 
+\contentsline {subsubsection}{URL}{30}{subsubsection*.37}% 
+\contentsline {subsubsection}{Input}{30}{subsubsection*.38}% 
+\contentsline {paragraph}{Parameters}{30}{paragraph*.39}% 
+\contentsline {subsubsection}{Output}{31}{subsubsection*.40}% 
+\contentsline {subsection}{\numberline {6.1.3}switchTray}{31}{subsection.6.1.3}% 
+\contentsline {subsubsection}{URL}{31}{subsubsection*.41}% 
+\contentsline {subsubsection}{Input}{31}{subsubsection*.42}% 
+\contentsline {paragraph}{Parameters}{31}{paragraph*.43}% 
+\contentsline {subsubsection}{Output}{31}{subsubsection*.44}% 
+\contentsline {subsection}{\numberline {6.1.4}editTray}{32}{subsection.6.1.4}% 
+\contentsline {subsubsection}{URL}{32}{subsubsection*.45}% 
+\contentsline {subsubsection}{Input}{32}{subsubsection*.46}% 
+\contentsline {paragraph}{Parameters}{32}{paragraph*.47}% 
+\contentsline {subsubsection}{Output}{32}{subsubsection*.48}% 
+\contentsline {subsection}{\numberline {6.1.5}moveTray}{33}{subsection.6.1.5}% 
+\contentsline {subsubsection}{URL}{33}{subsubsection*.49}% 
+\contentsline {subsubsection}{Input}{33}{subsubsection*.50}% 
+\contentsline {paragraph}{Parameters}{33}{paragraph*.51}% 
+\contentsline {subsubsection}{Output}{33}{subsubsection*.52}% 
+\contentsline {subsection}{\numberline {6.1.6}nextExpiring}{33}{subsection.6.1.6}% 
+\contentsline {subsubsection}{URL}{33}{subsubsection*.53}% 
+\contentsline {subsubsection}{Input}{34}{subsubsection*.54}% 
+\contentsline {paragraph}{Parameters}{34}{paragraph*.55}% 
+\contentsline {subsubsection}{Output}{34}{subsubsection*.56}% 
+\contentsline {subsection}{\numberline {6.1.7}getAllCategory}{34}{subsection.6.1.7}% 
+\contentsline {subsubsection}{URL}{34}{subsubsection*.57}% 
+\contentsline {subsubsection}{Input}{34}{subsubsection*.58}% 
+\contentsline {paragraph}{Parameters}{34}{paragraph*.59}% 
+\contentsline {subsubsection}{Output}{35}{subsubsection*.60}% 
+\contentsline {subsection}{\numberline {6.1.8}addTrayMany}{35}{subsection.6.1.8}% 
+\contentsline {subsubsection}{URL}{35}{subsubsection*.61}% 
+\contentsline {subsubsection}{Input}{35}{subsubsection*.62}% 
+\contentsline {subsubsection}{Output}{35}{subsubsection*.63}% 
+\contentsline {subsection}{\numberline {6.1.9}editTrayMany}{35}{subsection.6.1.9}% 
+\contentsline {subsubsection}{URL}{35}{subsubsection*.64}% 
+\contentsline {subsubsection}{Input}{35}{subsubsection*.65}% 
+\contentsline {subsubsection}{Output}{35}{subsubsection*.66}% 
+\contentsline {subsection}{\numberline {6.1.10}removeTrayMany}{36}{subsection.6.1.10}% 
+\contentsline {subsubsection}{URL}{36}{subsubsection*.67}% 
+\contentsline {subsubsection}{Input}{36}{subsubsection*.68}% 
+\contentsline {subsubsection}{Output}{36}{subsubsection*.69}% 
+\contentsline {section}{\numberline {6.2}Bay functions}{36}{section.6.2}% 
+\contentsline {subsection}{\numberline {6.2.1}addBay}{36}{subsection.6.2.1}% 
+\contentsline {subsubsection}{URL}{36}{subsubsection*.70}% 
+\contentsline {subsubsection}{Input}{36}{subsubsection*.71}% 
+\contentsline {paragraph}{Parameters}{37}{paragraph*.72}% 
+\contentsline {subsubsection}{Output}{37}{subsubsection*.73}% 
+\contentsline {subsection}{\numberline {6.2.2}removeBay}{37}{subsection.6.2.2}% 
+\contentsline {subsubsection}{URL}{37}{subsubsection*.74}% 
+\contentsline {subsubsection}{Input}{37}{subsubsection*.75}% 
+\contentsline {paragraph}{Parameters}{37}{paragraph*.76}% 
+\contentsline {subsubsection}{Output}{37}{subsubsection*.77}% 
+\contentsline {subsection}{\numberline {6.2.3}editBay}{38}{subsection.6.2.3}% 
+\contentsline {subsubsection}{URL}{38}{subsubsection*.78}% 
+\contentsline {subsubsection}{Input}{38}{subsubsection*.79}% 
+\contentsline {paragraph}{Parameters}{38}{paragraph*.80}% 
+\contentsline {subsubsection}{Output}{38}{subsubsection*.81}% 
+\contentsline {subsection}{\numberline {6.2.4}getTraysInBay}{39}{subsection.6.2.4}% 
+\contentsline {subsubsection}{URL}{39}{subsubsection*.82}% 
+\contentsline {subsubsection}{Input}{39}{subsubsection*.83}% 
+\contentsline {paragraph}{Parameters}{39}{paragraph*.84}% 
+\contentsline {subsubsection}{Output}{39}{subsubsection*.85}% 
+\contentsline {section}{\numberline {6.3}Zone functions}{39}{section.6.3}% 
+\contentsline {subsection}{\numberline {6.3.1}addZone}{39}{subsection.6.3.1}% 
+\contentsline {subsubsection}{URL}{39}{subsubsection*.86}% 
+\contentsline {subsubsection}{Input}{39}{subsubsection*.87}% 
+\contentsline {paragraph}{Parameters}{40}{paragraph*.88}% 
+\contentsline {subsubsection}{Output}{40}{subsubsection*.89}% 
+\contentsline {subsection}{\numberline {6.3.2}editZone}{40}{subsection.6.3.2}% 
+\contentsline {subsubsection}{URL}{40}{subsubsection*.90}% 
+\contentsline {subsubsection}{Input}{40}{subsubsection*.91}% 
+\contentsline {paragraph}{Parameters}{40}{paragraph*.92}% 
+\contentsline {subsubsection}{Output}{41}{subsubsection*.93}% 
+\contentsline {subsection}{\numberline {6.3.3}getBaysinZone}{41}{subsection.6.3.3}% 
+\contentsline {subsubsection}{URL}{41}{subsubsection*.94}% 
+\contentsline {subsubsection}{Input}{41}{subsubsection*.95}% 
+\contentsline {paragraph}{Parameters}{41}{paragraph*.96}% 
+\contentsline {subsubsection}{Output}{41}{subsubsection*.97}% 
+\contentsline {subsection}{\numberline {6.3.4}getZones}{41}{subsection.6.3.4}% 
+\contentsline {subsubsection}{URL}{41}{subsubsection*.98}% 
+\contentsline {subsubsection}{Input}{42}{subsubsection*.99}% 
+\contentsline {subsubsection}{Output}{42}{subsubsection*.100}% 
+\contentsline {subsection}{\numberline {6.3.5}removeZone}{42}{subsection.6.3.5}% 
+\contentsline {subsubsection}{URL}{42}{subsubsection*.101}% 
+\contentsline {subsubsection}{Input}{42}{subsubsection*.102}% 
+\contentsline {paragraph}{Parameters}{42}{paragraph*.103}% 
+\contentsline {subsubsection}{Output}{42}{subsubsection*.104}% 

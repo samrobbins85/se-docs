@@ -2,11 +2,18 @@
 
 .. rst-class:: hide-header
 
-Welcome to Flask
+Durham Foodbank
 ================
 
 
+Introduction
+------------
 
+
+.. toctree::
+   :maxdepth: 2
+
+   Introduction
 
 System Overview
 ------------
@@ -29,6 +36,20 @@ Installation
    docs/Installation/database
    docs/Installation/frontEnd
 
+   
+User Interface Walkaround
+------------
+
+
+.. toctree::
+   :maxdepth: 2
+
+   docs/ui/overview
+   docs/ui/reports
+   docs/ui/stocktaking
+
+
+   
 Expansion
 ------------
 

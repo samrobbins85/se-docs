@@ -76,7 +76,7 @@
          
 
 \title{Durham Foodbank}
-\date{Apr 09, 2020}
+\date{Apr 14, 2020}
 \release{1.0.0}
 \author{Group 12}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -91,6 +91,58 @@
 \pagestyle{normal}
 \phantomsection\label{\detokenize{index::doc}}
 
+
+
+\chapter{Introduction}
+\label{\detokenize{index:introduction}}
+Welcome to the user manual for the Durham Foodbank stock management
+system. This manual covers the basics through to more advanced content.
+
+
+\section{Installation}
+\label{\detokenize{Introduction:installation}}\label{\detokenize{Introduction::doc}}
+This section walks you through how to install and host the necessary
+components of the system so that it can be used in production. The four
+components are the front end, the back end, the database, and
+authentication. Each component has its relevant subsection with
+instructions on installation and deployment. Where relevant, there are
+links directing to outside documentation that will aid you in this
+process.
+
+
+\section{User Interface Walkaround}
+\label{\detokenize{Introduction:user-interface-walkaround}}
+With the system up and running, this section will guide you through on
+how to use the system and its key functions. Each step is accompained by
+pictures to aid you in using the system.
+
+
+\section{System Overview}
+\label{\detokenize{Introduction:system-overview}}
+This section provides a quick overview of the two main parts of the
+system \sphinxhyphen{} the front end and back end. This section adds context to the
+rest of the document, which delves into the more technical aspects of
+the system.
+
+
+\section{Developer}
+\label{\detokenize{Introduction:developer}}
+This is where the API documentation for the backend is described. Every
+function in the backend is split into three categories: tray functions,
+bay functions, and zone functions. Each function documentation describes
+the API URL, the input it receives, the parameters it requires, and the
+output it provides.
+
+
+\section{Expansion}
+\label{\detokenize{Introduction:expansion}}
+\begin{DUlineblock}{0em}
+\item[] Should you wish to develop the system further, the Expansion section
+details the structure of the back end functions, as well as
+information on adding to the database, and authentication.
+\item[] \sphinxstylestrong{It is recommended that someone with development experience works on
+expansion of the system.}
+\end{DUlineblock}
 
 
 \chapter{System Overview}
@@ -587,6 +639,356 @@ The code can then be deployed with the command \sphinxcode{\sphinxupquote{now}},
 \sphinxhref{https://zeit.co/docs/v2/platform/deployments\#now-cli}{here}
 
 \end{enumerate}
+
+
+\chapter{User Interface Walkaround}
+\label{\detokenize{index:user-interface-walkaround}}
+
+\section{Overview}
+\label{\detokenize{docs/ui/overview:overview}}\label{\detokenize{docs/ui/overview::doc}}
+
+\subsection{Login}
+\label{\detokenize{docs/ui/overview:login}}
+To sign in, Click on the hamburger menu button in the top left hand
+corner and click login.
+
+
+\subsection{Sign in page}
+\label{\detokenize{docs/ui/overview:sign-in-page}}
+Once you’ve clicked login, you will be redirected to Auth0’s signin
+page, you are prompted to enter the credentials either you created, or
+the development credentials provided.
+.. image:: images/overview/signinPage.png
+\begin{quote}
+\begin{quote}\begin{description}
+\item[{width}] \leavevmode
+500
+
+\item[{align}] \leavevmode
+center
+
+\end{description}\end{quote}
+\end{quote}
+
+
+\subsection{Side Bar}
+\label{\detokenize{docs/ui/overview:side-bar}}
+You can click any icon or text to navigate to the respective target. To
+view the full menu you can click the hamburger menu in the top left hand
+corner to expand the side bar.
+\begin{itemize}
+\item {} 
+By default the Documentation tab is always accessible with or without logging in.
+
+\item {} 
+Once signed in, all warehouse features are accessible.
+
+\end{itemize}
+
+
+\subsection{Signing Out}
+\label{\detokenize{docs/ui/overview:signing-out}}
+To Sign out, click on the circular user icon image in the sidebar, and
+then click log out.
+
+
+\section{Reports}
+\label{\detokenize{docs/ui/reports:reports}}\label{\detokenize{docs/ui/reports::doc}}
+Access by clicking reports in the side bar.
+
+
+\subsection{What you can do}
+\label{\detokenize{docs/ui/reports:what-you-can-do}}\begin{itemize}
+\item {} \subsubsection*{Search for all items that match a certain category, and
+where to find them.}
+
+\item {} \subsubsection*{View a snapshot of the warehouse categorised by location.}
+
+\item {} \subsubsection*{View a list of all trays ordered by their expiry date.}
+
+\item {} \subsubsection*{export a csv file containing all the trays in the
+warehouse.}
+
+\item {} \subsubsection*{Publish a report as a csv file, and keep it stored for
+future trend reporting.}
+
+\item {} \subsubsection*{See a percentage of all free trays in the warehouse to
+get an accurate representation of how full the warehouse is.}
+
+\end{itemize}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{reportsSections}.png}\hspace*{\fill}}
+
+
+\subsubsection{Overview}
+\label{\detokenize{docs/ui/reports:overview}}\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxcode{\sphinxupquote{Section 1}} on the diagram shows you the snapshot of the warehouse.
+\begin{itemize}
+\item {} 
+you can filter this snapshot to only show trays that contain a
+desired category by choosing it from the drop down menu in
+\sphinxcode{\sphinxupquote{Control Panel 1}}
+
+\end{itemize}
+
+\item {} 
+You can export the full database of trays at this point in time into
+a CSV file and download it.
+\begin{itemize}
+\item {} 
+You can do this by clicking \sphinxcode{\sphinxupquote{Export}} in \sphinxcode{\sphinxupquote{Control Panel 2}}.
+
+\end{itemize}
+
+\item {} 
+You can save the snapshot of the warehouse on the server for
+guaranteed future access, by clicking \sphinxcode{\sphinxupquote{Publish}} in
+\sphinxcode{\sphinxupquote{Control Panel 3}}.
+\begin{itemize}
+\item {} 
+This cannot by reversed, so only publish if and when it is
+absolutely necessary to do so, e.g. on a weekly basis after stock
+is taken.
+
+\end{itemize}
+
+\item {} 
+You can download published reports in a csv format by selecting the
+report that was published from the dropdown list in
+\sphinxcode{\sphinxupquote{Control panel 4}} and clicking the \sphinxcode{\sphinxupquote{Download}} button in
+\sphinxcode{\sphinxupquote{Control Panel 4}}.
+
+\end{enumerate}
+
+
+\subsubsection{Navigating the warehouse}
+\label{\detokenize{docs/ui/reports:navigating-the-warehouse}}\begin{itemize}
+\item {} 
+Clicking on the target zone to expand.
+\begin{itemize}
+\item {} 
+You will see the total weight of all products in the zone
+
+\end{itemize}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{weights}.png}\hspace*{\fill}}
+\begin{itemize}
+\item {} 
+Followed by a list of bays that the zone contains, or the bays
+that contain a category to be searched for.
+\begin{itemize}
+\item {} 
+Expanding on a bay will show you the full weight of trays in
+that bay, this can be useful to see if a bay is too heavily
+laden.
+
+\item {} 
+Beneath is a list of all the trays that match the search
+criteria, (their weight, category and expiry).
+
+\end{itemize}
+
+\end{itemize}
+
+\end{itemize}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{reportsNavigate}.jpg}\hspace*{\fill}}
+\begin{itemize}
+\item {} 
+Note: you will have to expand on each acordion manually to see the
+contents. This is meant to create a clean environment to view the
+data, if this is not suitable you can:
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+export to CSV,
+
+\end{enumerate}
+
+2. Open the file in Microsoft Excel, and apply filters to each column and perform
+a search based on any criteria, sort by any field. A full feature list
+can be found here: \sphinxhref{https://support.office.com/en-gb/article/filter-data-in-a-range-or-table-01832226-31b5-4568-8806-38c37dcc180e}{Help with Microsoft Excel
+Filters}
+
+\end{itemize}
+
+
+\subsubsection{Determine how full the warehouse is}
+\label{\detokenize{docs/ui/reports:determine-how-full-the-warehouse-is}}\begin{itemize}
+\item {} 
+The progress wheel in \sphinxcode{\sphinxupquote{Section 2}} shows the percentage of the tray
+spaces in the warehouse that have been declared as empty on the most
+recent stock take.
+
+\end{itemize}
+
+
+\subsubsection{View an ordered list of the next Expiring trays}
+\label{\detokenize{docs/ui/reports:view-an-ordered-list-of-the-next-expiring-trays}}
+In \sphinxcode{\sphinxupquote{Section 3}} of figure 1, you can see an ordered list of all the
+trays in the warehouse.
+\begin{itemize}
+\item {} 
+You can filter the list by a chosen category in drop down menu within
+\sphinxcode{\sphinxupquote{Control Panel 5}}.
+
+\end{itemize}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{section3}.jpg}\hspace*{\fill}}
+
+
+\section{Stock Taking}
+\label{\detokenize{docs/ui/stocktaking:stock-taking}}\label{\detokenize{docs/ui/stocktaking::doc}}
+Access by clicking Stock Take in the side bar.
+
+
+\subsection{Overview}
+\label{\detokenize{docs/ui/stocktaking:overview}}
+Whenever a change is made to any tray, these changes are immediately
+synced with the server, and so you can have multiple users taking stock
+and these changes will be reflected accross all devices that are active.
+
+You can choose to take stock whenever you want, if you wish to only
+count a single bay you can do so.
+
+There will be a loading screen, it will only take about half a minute
+depending on your internet connection. Please be patient as the whole
+database is being pulled, this will help you save time while counting.
+
+
+\subsection{Navigating the warehouse}
+\label{\detokenize{docs/ui/stocktaking:navigating-the-warehouse}}\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+Start by selecting the zone you are taking stock in.
+
+\end{enumerate}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{zoneSelection}.jpg}\hspace*{\fill}}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{baySelection}.jpg}\hspace*{\fill}}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\setcounter{enumi}{1}
+\item {} 
+The default bay will be the one added first when designing the
+warehouse.
+\begin{itemize}
+\item {} 
+You can define your ideal tour through a zone when building your
+warehouse.
+
+\item {} 
+This will help you rely on the next and previous buttons, to save
+time.
+
+\end{itemize}
+
+\item {} 
+You can navigate between bays by clicking the next and previous
+buttons .
+
+\end{enumerate}
+
+
+\subsection{Selecting trays}
+\label{\detokenize{docs/ui/stocktaking:selecting-trays}}
+A single left click on the desired tray, will high light it in blue,
+indicating it’s selection. Deselection is just as easy, just click again
+to deselect it.
+
+\begin{DUlineblock}{0em}
+\item[] If you wish to select all the trays in the bay, you may click the
+\sphinxcode{\sphinxupquote{Select All}} button.
+\item[] note: once a modification occurs on any selected tray it is
+automatically de\sphinxhyphen{}selected; this again is meant to save you time.
+\end{DUlineblock}
+
+
+\subsection{Swapping two trays within a bay}
+\label{\detokenize{docs/ui/stocktaking:swapping-two-trays-within-a-bay}}
+You may only swap if you only have two trays selected. Clicking this
+will swap the contents of the two trays, their expiry dates and their
+weights.
+
+Note: you can only do this for trays within a given bay. The backend
+supports cross bay/zone swaps and moves however due to time limitations
+in the project it self, these features were ommited as they were too
+unstable to implement in the front end.
+
+
+\subsection{Modifying contents of selected trays}
+\label{\detokenize{docs/ui/stocktaking:modifying-contents-of-selected-trays}}
+Once the trays to be modified are selected, navigate to the category tab
+in the bottom half of the interface. Then you can:
+\begin{itemize}
+\item {} 
+Choose a \sphinxcode{\sphinxupquote{EMPTY}} to consider this tray as an empty, however you may
+still have weight and expiry attributes as requested by the client.
+
+\item {} 
+Choose a category that you have chosen before by any of the quick
+toggle category buttons.
+
+\item {} 
+Manually type in a category and click set.
+\begin{itemize}
+\item {} 
+node: you will not immediately see this custom category show up in
+your quick toggle categories, you will need to refresh the page to
+do so; however \sphinxcode{\sphinxupquote{EMPTY}} will always be in the quick toggles.
+
+\end{itemize}
+
+\end{itemize}
+
+
+\subsection{Modifying expiry date of selected trays}
+\label{\detokenize{docs/ui/stocktaking:modifying-expiry-date-of-selected-trays}}
+Choose your selected trays, navigate to the expiry tab in the interface
+and then:
+\begin{itemize}
+\item {} 
+Choose \sphinxcode{\sphinxupquote{None}} to give no expiry date,
+
+\item {} 
+to give only a month as an expiry date, select \sphinxcode{\sphinxupquote{None}} followed by a
+desired month.
+
+\item {} 
+To choose an expiry year simply give a desired year,
+\begin{itemize}
+\item {} 
+immediately followed by a month to give an expiry date in the
+MM/YYYY format.
+
+\end{itemize}
+
+\end{itemize}
+
+
+\subsection{Modifying Weight of selected trays}
+\label{\detokenize{docs/ui/stocktaking:modifying-weight-of-selected-trays}}
+Choose your selected trays, navigate to the Weight tab in the interface
+and then:
+\begin{itemize}
+\item {} 
+Simply type the desired weight as a number, with or without a
+decimal, and click update.
+
+\item {} 
+or Click \sphinxcode{\sphinxupquote{None}} to give a tray no weight.
+
+\end{itemize}
+
+
+\subsection{Undo/Redo}
+\label{\detokenize{docs/ui/stocktaking:undo-redo}}
+You can undo the changes you just made in any zone/bay by clicking undo,
+and continue to redo. changes are saved locally and made on the server
+if you choose to undo changes that were made.
 
 
 \chapter{Expansion}
