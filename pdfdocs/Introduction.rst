@@ -1,6 +1,17 @@
 Welcome to the user manual for the Durham Foodbank stock management
 system. This manual covers the basics through to more advanced content.
 
+===========
+Basic usage
+===========
+The website for this can be found `here
+<https://durhamfoodbank.now.sh/>`_. 
+
+All the credentials are the same and can be found in the credentials.txt file in our handover folder
+
+=============================
+Structure of the user manual
+=============================
 Installation
 ------------
 
