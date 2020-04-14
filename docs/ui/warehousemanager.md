@@ -28,7 +28,7 @@ There are various types of changes and actions that you can perform to the zones
 <img alt="Edit zone name" src={useBaseUrl('img/warehousemanager/04-editZone.jpg')} />  
 
 3. Zones can be deleted by clicking the delete zone button in its dropdown and then confirming.
-  * NOTE: All bays and trays contained inside the zone will also be deleted.
+    * NOTE: All bays and trays contained inside the zone will also be deleted.
 <img alt="Select a zone" src={useBaseUrl('img/warehousemanager/05-removeZone.jpg')} />  
 <img alt="Confirm zone deletion" src={useBaseUrl('img/warehousemanager/06-removeZone.jpg')} /> 
 
@@ -41,6 +41,6 @@ There are various types of changes and actions that you can perform to the zones
 <img alt="Edit bay values" src={useBaseUrl('img/warehousemanager/10-editBay.jpg')} /> 
 
 6. Bays can also be deleted - provided that it is not the final bay in a zone.
-  * NOTE: All trays contained inside the bay will also be deleted.
+    * NOTE: All trays contained inside the bay will also be deleted.
 <img alt="Select a bay" src={useBaseUrl('img/warehousemanager/11-removeBay.jpg')} />  
 <img alt="Confirm bay deletion" src={useBaseUrl('img/warehousemanager/12-removeBay.jpg')} />
