@@ -282,6 +282,11 @@ INPUT ./auth0.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmri8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT signinPage.png
+INPUT ./signinPage.png
+INPUT ./signinPage.png
+INPUT signinPage.png
+INPUT ./signinPage.png
 INPUT reportsSections.png
 INPUT ./reportsSections.png
 INPUT ./reportsSections.png

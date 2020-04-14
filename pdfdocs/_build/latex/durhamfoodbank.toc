@@ -50,24 +50,24 @@
 \contentsline {chapter}{\numberline {4}User Interface Walkaround}{13}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Overview}{13}{section.4.1}% 
 \contentsline {subsection}{\numberline {4.1.1}Login}{13}{subsection.4.1.1}% 
-\contentsline {subsection}{\numberline {4.1.2}Sign in page}{13}{subsection.4.1.2}% 
-\contentsline {subsection}{\numberline {4.1.3}Side Bar}{13}{subsection.4.1.3}% 
-\contentsline {subsection}{\numberline {4.1.4}Signing Out}{14}{subsection.4.1.4}% 
-\contentsline {section}{\numberline {4.2}Reports}{14}{section.4.2}% 
-\contentsline {subsection}{\numberline {4.2.1}What you can do}{14}{subsection.4.2.1}% 
-\contentsline {subsubsection}{Overview}{15}{subsubsection*.26}% 
-\contentsline {subsubsection}{Navigating the warehouse}{16}{subsubsection*.27}% 
-\contentsline {subsubsection}{Determine how full the warehouse is}{18}{subsubsection*.28}% 
-\contentsline {subsubsection}{View an ordered list of the next Expiring trays}{18}{subsubsection*.29}% 
-\contentsline {section}{\numberline {4.3}Stock Taking}{18}{section.4.3}% 
-\contentsline {subsection}{\numberline {4.3.1}Overview}{18}{subsection.4.3.1}% 
-\contentsline {subsection}{\numberline {4.3.2}Navigating the warehouse}{19}{subsection.4.3.2}% 
-\contentsline {subsection}{\numberline {4.3.3}Selecting trays}{20}{subsection.4.3.3}% 
-\contentsline {subsection}{\numberline {4.3.4}Swapping two trays within a bay}{20}{subsection.4.3.4}% 
-\contentsline {subsection}{\numberline {4.3.5}Modifying contents of selected trays}{20}{subsection.4.3.5}% 
-\contentsline {subsection}{\numberline {4.3.6}Modifying expiry date of selected trays}{20}{subsection.4.3.6}% 
-\contentsline {subsection}{\numberline {4.3.7}Modifying Weight of selected trays}{21}{subsection.4.3.7}% 
-\contentsline {subsection}{\numberline {4.3.8}Undo/Redo}{21}{subsection.4.3.8}% 
+\contentsline {subsection}{\numberline {4.1.2}Sign in page}{14}{subsection.4.1.2}% 
+\contentsline {subsection}{\numberline {4.1.3}Side Bar}{14}{subsection.4.1.3}% 
+\contentsline {subsection}{\numberline {4.1.4}Signing Out}{15}{subsection.4.1.4}% 
+\contentsline {section}{\numberline {4.2}Reports}{15}{section.4.2}% 
+\contentsline {subsection}{\numberline {4.2.1}What you can do}{15}{subsection.4.2.1}% 
+\contentsline {subsubsection}{Overview}{16}{subsubsection*.26}% 
+\contentsline {subsubsection}{Navigating the warehouse}{17}{subsubsection*.27}% 
+\contentsline {subsubsection}{Determine how full the warehouse is}{19}{subsubsection*.28}% 
+\contentsline {subsubsection}{View an ordered list of the next Expiring trays}{19}{subsubsection*.29}% 
+\contentsline {section}{\numberline {4.3}Stock Taking}{19}{section.4.3}% 
+\contentsline {subsection}{\numberline {4.3.1}Overview}{19}{subsection.4.3.1}% 
+\contentsline {subsection}{\numberline {4.3.2}Navigating the warehouse}{20}{subsection.4.3.2}% 
+\contentsline {subsection}{\numberline {4.3.3}Selecting trays}{21}{subsection.4.3.3}% 
+\contentsline {subsection}{\numberline {4.3.4}Swapping two trays within a bay}{21}{subsection.4.3.4}% 
+\contentsline {subsection}{\numberline {4.3.5}Modifying contents of selected trays}{21}{subsection.4.3.5}% 
+\contentsline {subsection}{\numberline {4.3.6}Modifying expiry date of selected trays}{21}{subsection.4.3.6}% 
+\contentsline {subsection}{\numberline {4.3.7}Modifying Weight of selected trays}{22}{subsection.4.3.7}% 
+\contentsline {subsection}{\numberline {4.3.8}Undo/Redo}{22}{subsection.4.3.8}% 
 \contentsline {chapter}{\numberline {5}Expansion}{23}{chapter.5}% 
 \contentsline {section}{\numberline {5.1}API Expansion}{23}{section.5.1}% 
 \contentsline {subsection}{\numberline {5.1.1}Writing Back\sphinxhyphen {}end Functions}{23}{subsection.5.1.1}% 

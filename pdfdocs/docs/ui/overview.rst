@@ -14,6 +14,7 @@ Sign in page
 Once you’ve clicked login, you will be redirected to Auth0’s signin
 page, you are prompted to enter the credentials either you created, or
 the development credentials provided.
+
 .. image:: images/overview/signinPage.png
   :width: 500
   :align: center
