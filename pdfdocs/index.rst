@@ -47,6 +47,7 @@ User Interface Walkaround
    docs/ui/overview
    docs/ui/reports
    docs/ui/stocktaking
+   docs/ui/warehousemanager
 
 
    

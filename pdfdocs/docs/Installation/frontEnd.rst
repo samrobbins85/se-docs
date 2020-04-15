@@ -9,6 +9,8 @@ the user interface with the program. It is a react app, and can be
 started with the command ``npm install`` followed by ``npm start``, you
 will then be taken to a browser window with the application loaded.
 
+Note that the frontend and backend should be run in separate terminal windows.
+
 
 Deployment
 ~~~~~~~~~~~~~~

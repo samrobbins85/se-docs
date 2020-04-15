@@ -76,7 +76,7 @@
          
 
 \title{Durham Foodbank}
-\date{Apr 14, 2020}
+\date{Apr 15, 2020}
 \release{1.0.0}
 \author{Group 12}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -528,7 +528,9 @@ In our handover there is a folder named \sphinxcode{\sphinxupquote{backend}}, in
 the server that manages the requests made in the website. It is built
 using Node.js and Express and can be started with \sphinxcode{\sphinxupquote{npm install}}
 followed by \sphinxcode{\sphinxupquote{npm start}}, the server will then be hosted on port
-\sphinxstylestrong{3000}
+\sphinxstylestrong{3001}
+
+Note that the frontend and backend should be run in separate terminal windows.
 
 When both the front end have been started, requests can be made between
 them
@@ -598,6 +600,8 @@ In our handover there is a folder named \sphinxcode{\sphinxupquote{frontend}}, i
 the user interface with the program. It is a react app, and can be
 started with the command \sphinxcode{\sphinxupquote{npm install}} followed by \sphinxcode{\sphinxupquote{npm start}}, you
 will then be taken to a browser window with the application loaded.
+
+Note that the frontend and backend should be run in separate terminal windows.
 
 
 \subsection{Deployment}
@@ -990,6 +994,115 @@ or Click \sphinxcode{\sphinxupquote{None}} to give a tray no weight.
 You can undo the changes you just made in any zone/bay by clicking undo,
 and continue to redo. changes are saved locally and made on the server
 if you choose to undo changes that were made.
+
+
+\section{Warehouse Manager}
+\label{\detokenize{docs/ui/warehousemanager:warehouse-manager}}\label{\detokenize{docs/ui/warehousemanager::doc}}
+Access by clicking Warehouse Manager in the side bar.
+
+
+\subsection{Overview}
+\label{\detokenize{docs/ui/warehousemanager:overview}}
+When loaded, this page collects all of the zones in the database, as
+well as the bays contained within them, and displays them to the user in
+an accordion style menu.
+
+On the left is a wheel that displays the percentage of trays filled out
+of the total potential number of trays in the warehouse, and also lists
+the exact number of trays that are empty.
+
+Whenever a (valid) change is made to any of these zones and bays, the
+page will be refreshed accordingly to display the changes.
+
+There are various types of changes and actions that you can perform to
+the zones and bays, as follows.
+
+
+\subsection{Actions to Perform}
+\label{\detokenize{docs/ui/warehousemanager:actions-to-perform}}\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+A zone can be added by selecting the button on the far right and
+entering valid data into the dropdowns. Zone names must be unique.
+
+\end{enumerate}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{01-addZone}.png}\hspace*{\fill}}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{01-addZone}.png}\hspace*{\fill}}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\setcounter{enumi}{1}
+\item {} 
+Zone names can be changed by selecting a zone in the dropdown, then
+clicking the edit zone name. Enter a zone name that is currently not
+in use.
+
+\end{enumerate}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{03-editZone}.png}\hspace*{\fill}}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{04-editZone}.png}\hspace*{\fill}}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\setcounter{enumi}{2}
+\item {} 
+Zones can be deleted by clicking the delete zone button in its
+dropdown and then confirming.
+\begin{itemize}
+\item {} 
+NOTE: All bays and trays contained inside the zone will also be
+deleted.
+
+\end{itemize}
+
+\end{enumerate}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{05-removeZone}.png}\hspace*{\fill}}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{06-removeZone}.png}\hspace*{\fill}}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\setcounter{enumi}{3}
+\item {} 
+Bays can be added to any zone by clicking on the zone you wish to add
+the bay to and entering valid data. Bay names must be unique within
+zones.
+
+\end{enumerate}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{07-addBay}.png}\hspace*{\fill}}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{08-addBay}.png}\hspace*{\fill}}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\setcounter{enumi}{4}
+\item {} 
+Bay dimensions can be altered by selecting a bay inside a zone then
+entering new values.
+
+\end{enumerate}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{09-editBay}.png}\hspace*{\fill}}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{10-editBay}.png}\hspace*{\fill}}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\setcounter{enumi}{5}
+\item {} 
+Bays can also be deleted \sphinxhyphen{} provided that it is not the final bay in a
+zone.
+\begin{itemize}
+\item {} 
+NOTE: All trays contained inside the bay will also be deleted.
+
+\end{itemize}
+
+\end{enumerate}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{11-removeBay}.png}\hspace*{\fill}}
+
+\noindent{\hspace*{\fill}\sphinxincludegraphics[width=500\sphinxpxdimen]{{12-removeBay}.png}\hspace*{\fill}}
 
 
 \chapter{Expansion}
