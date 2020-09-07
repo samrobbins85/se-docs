@@ -12,7 +12,7 @@
     "@docusaurus/core": "^2.0.0-alpha.40",
     "@docusaurus/preset-classic": "^2.0.0-alpha.40",
     "classnames": "^2.2.6",
-    "netlify-cms": "^2.10.29",
+    "netlify-cms": "^2.10.56",
     "react": "^16.13.1",
     "react-dom": "^16.8.4"
   },
