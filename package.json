@@ -13,7 +13,7 @@
     "@docusaurus/preset-classic": "^2.0.0-alpha.40",
     "classnames": "^2.2.6",
     "netlify-cms": "^2.10.61",
-    "react": "^16.14.0",
+    "react": "^17.0.1",
     "react-dom": "^16.14.0"
   },
   "browserslist": {
