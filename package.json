@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-alpha.40",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.40",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.175d9c3c8",
     "classnames": "^2.2.6",
     "netlify-cms": "^2.10.61",
     "react": "^17.0.1",
